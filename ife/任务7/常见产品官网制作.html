@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8"/>
+    	<title>实现常见的技术产品官网的页面架构及样式布局</title>
+    	<style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+            list-style:none;
+        }
+        .head{
+            width:100%;
+            height:55px;
+            background-color:#fff;
+        }
+        .head .top-logo{
+            float:left;
+            font-size:21px;
+            font-family:"黑体";
+            margin:17px 0 10px 67px;
+        }
+
+        .head ul{
+            margin-right:17px;
+        }
+        .head ul li{
+            float:right;
+            font-size:14px;
+            font-family:"微软雅黑";
+            color:#787b83;
+            margin:19px 30px 0px 0;
+            cursor: pointer;
+        }
+        .head ul .icon{
+            list-style-image:url(images/task_1_7_1_06.png);
+            margin-left:20px;
+            color:#e74f4d;
+        }
+        .head ul .page{
+            color:#e74f4d;
+            width:65px;
+            text-align:center;
+            padding-bottom:22px;
+            border-bottom:4px solid #e74f4d;
+        }
+        .body1{
+            width:100%;
+            height:650px;
+            overflow:hidden;
+            background:url(images/task_1_7_1_02.png) no-repeat center;
+            background-size: cover;
+            font-family:"微软雅黑";
+            color:#fff;
+        }
+        .body1 h1{
+            font-size:60px;
+            margin:218px 0 0 117px;
+        }
+        .body1 p{
+            font-size:21px;
+            margin:22px 0 0 117px;
+            line-height:30px;
+        }
+        .body1 a{
+            display:block;
+            width:331px;
+            height:65px;
+            background-color:#e74f4d;
+            font-size:30px;
+            text-decoration:none;
+            color:#fff;
+            text-align:center;
+            margin:69px 0 0 117px;
+            line-height:65px;
+        }
+        .body2{
+            overflow:hidden;
+            width:100%;
+            height:251px;
+            background-color:#fff;
+            font-size:14px;
+            font-family: "黑体";
+            color:#767777;
+        }
+        .body2 ul{
+            width:100%;
+            margin-left:58px;
+            padding-top:50px;
+        }
+
+        .body2 ul li{
+            width:315px;
+            float:left;
+            text-align:center;
+        }
+        .body2 .text li{
+            border-right:2px solid #989999;
+            height:50px;
+            margin-top:50px;
+            margin-bottom:66px;
+        }
+        .body2 .text .text1{
+            border-right:none;
+        }
+        .body3{
+            width:100%;
+            height:360px;
+            background-color: #ededec;
+            text-align:center;
+        }
+        .body3 img{
+            position:relative;
+            top:90px;
+        }
+        .body3  h1{
+            font-weight:normal;
+            font-size:54px;
+            font-family:"黑体";
+            color:#a1a1a1;
+            margin-top:140px;
+
+        }
+        .body4{
+            height:341px;
+            background:url(images/task_1_7_1_022.png) no-repeat;
+            background-size: cover;
+        }
+        .body4 h2,.body4 p{
+            font-family:"微软雅黑";
+            color:#fff;
+            text-align:center;
+            padding-top:14px;
+            font-size:12px;
+        }
+        .body4 h2{
+            font-size:21px;
+            font-weight:normal;
+            padding-top:56px;
+        }
+        .body4 .rect{
+            position:relative;
+            left:49%;
+            width:32px;
+            padding-bottom:10px;
+            border-bottom:2px solid #fff;
+        }
+        .body4 .text,.body4 .click{
+            float:left;
+            width:236px;
+            height:36px;
+            margin-right:30px;
+            margin-top:55px;
+        }
+
+        .body4 .text{
+            background:#fff url(images/task_1_7_1_034.png) no-repeat top 50% right;
+        }
+
+        #text{
+            margin-left:10%;
+        }
+        .body4 ul{
+            font-size:12px;
+            background-color:#e3e3e4;
+            font-family:"微软雅黑";
+            color:#787879;
+            width:236px;
+            position:relative;
+            float:left;
+            left:-538px;
+            top:5px;
+            border:1px solid #be4e48;
+
+        }
+         .body4 ul li{
+            text-indent:2em;
+            line-height:25px;
+            cursor:pointer;
+         }
+         .body4 ul li:hover{
+            background:#be4e48 url(images/dagou.png) no-repeat left top 50%;
+            color:#fff;
+         }
+         .body5{
+            height:580px;
+            background-color:#f7f7f7;
+            padding-left:14%;
+         }
+         .body5 .photo{
+            float:left;
+            text-align:center;
+            font-family:"黑体";
+            font-weight:normal;
+            margin-top:70px;
+            margin-left:37px;
+         }
+         .body5 .photo img{
+            border:1px solid #dadada;
+         }
+         .body5 .photo h3{
+            font-weight:normal;
+            font-size:16px;
+            margin-bottom: 8px
+         }
+         .body5 .photo .shanghai{
+            font-size:24px;
+            padding-left:15px;
+            letter-spacing: 1em;
+         }
+
+         .body5 .photo p{
+            font-size:14px;
+            color:#9f9f9f;
+         }
+         .body6{
+            height:567px;
+            width:100%;
+         }
+         .body6 .left{
+            font-family:"微软雅黑";
+            color:#fff;
+            width:66.7%;
+            float:left;
+            height:100%;
+            background:url(images/task_1_7_1_43.png) no-repeat;
+            background-size:cover;
+            position:relative;
+            
+         }
+         .body6 .left .body6-text{
+            position:absolute;
+            text-align:center;
+            width: 100%;
+            top:100px;
+         }
+         .body6 .left h2{
+           font-size:50px;
+           font-weight:normal;
+         }
+         .body6 .left h1{
+            font-size:158px;
+             font-weight:normal;    
+         }
+         .body6 .right{
+            width:33.3%;
+            float:right;
+            position:relative;
+         }
+         .body6 .right .right-center{
+            position:absolute;
+            width:100%;
+            text-align:center;
+            top:165px;
+         }
+         .body6 .right .right-center h2{
+            font-family:"微软雅黑";
+            font-weight:normal;
+            font-size:20px;
+         }
+         .body6 .right .right-center h2 span{
+            color:#e7504d;
+         }
+          .body6 .right .right-center p{
+            color:#b7b7b7;
+            padding-top:20px;
+            font-size:12px;
+            font-family:"宋体";
+            line-height:42px;
+          }
+          .body6 .right .right-center .xiangqing{
+            display:block;
+            width:106px;
+            height:33px;
+            border:1px solid #e7504d;
+            margin-left:38%;
+            line-height:33px;
+            text-decoration:none;
+            color:#e7504d;
+            margin-top:50px;
+          }
+          .body6 .right .right-center  img{
+            margin-top:27px;
+          }
+          .body7{
+            width:100%;
+            height:521px;
+          }
+          .body7 .left,.body7 .center,.body7 .right{
+            float:left;
+            width:33.333%;
+            height:100%;
+            text-align:center;
+            font-family:"Microsoft YaHei";
+            
+            font-weight:normal;
+          }
+          .body7 .left{
+            background-color: #e74f4d;
+            color:#fff;
+          }
+          .body7 .left h5{
+            font-weight:normal;
+            font-size:21px;
+            margin-top:40%;
+          }
+          .body7 .left h5 span{
+            border-bottom:2px solid #fff;
+            padding-bottom:15px;
+          }
+           .body7 .center h5 span{
+            border-bottom:2px solid #000;
+            padding-bottom:15px;
+          }
+          .body7 .center h5{
+            font-weight:normal;
+            font-size:21px;
+            margin-top:40%;
+          }
+          .body7 input{
+            width:179px;
+            height:43px;
+            color:#fff;
+            background-color: #e74f4d;
+            border:1px solid #fff;
+            margin-top:40px;
+            font-size: 21px;
+          }
+           .body7 .center input{
+            background-color:#fff;
+            color:#e74f4d;
+            border:1px solid #e74f4d;
+           }
+          .body7 .right img{
+            width:100%;
+
+          }
+          .body8{
+            height:749px;
+            width:100%;
+          }
+          .body8 .head-text{
+            padding-top:120px;
+            text-align:center;
+          }
+          .body8 .head-text h1{
+            font-size:21px;
+            font-family:"Microsoft YaHei";
+            font-weight:normal;
+          }
+          .body8 .head-text h1 span{
+            border-bottom: 2px solid #e74f4d;
+            padding-bottom: 7px;
+          }
+          .body8 .head-text p{
+            font-size:12px;
+            font-family:"Microsoft YaHei";
+            color:#aaa;
+            margin-top:20px;
+            line-height:20px;
+          }
+          .body8 .body-text{
+            margin-top:105px;
+            font-size:12px;
+          }
+          .body8 .body-text .left-text{
+            width:23%;
+            margin-left:140px;
+            text-align:left;
+            float:left;
+          }
+          .body8 .body-text .left-text .text{
+            margin-bottom:38px;
+          }
+          .body8 .body-text .left-text .text h5{
+            font-size:14px;
+            font-weight:normal;
+            font-family: "SimHei";
+          }
+          .body8 .body-text .left-text .text p{
+            margin-top:25px;
+            color:#9d9b9a;
+            font-size: 12px;
+            line-height: 25px;
+          }
+          .body8 .body-text .left-text .text p span{
+            display: block;
+            text-align:right;
+            background: url(images/task_1_7_1_93.png) no-repeat right 30px top 50%;
+          }
+          .body8 .body-text .right-text{
+            float:left;
+            margin-left:77px;
+            width:50%;
+          }
+          .body8 .body-text .right-text input{
+            width:310px;
+            height:40px;
+            background-color: #ededee;
+            border:1px solid #ededee;
+            margin-bottom:20px;
+            margin-right: 10px;
+            font-size:12px;
+            text-indent:15px;
+          }
+          .body8 .body-text .right-text textarea{
+            height:119px;
+            width:638px;
+            background-color: #ededee;
+            border:1px solid #ededee;
+            margin-bottom: 20px;
+            text-indent: 15px;
+            line-height:20px;
+          }
+          #shengqing{
+            width:640px;
+            font-size:14px;
+            color:#000;
+            font-family:"SimHei";
+          }
+          .bottom{
+            height:415px;
+            background-color: #32353e;
+            color:#fff;
+            text-align: center;
+            position:relative;
+          }
+          .bottom h2{
+            padding-top:90px;
+            font-size:21px;
+            font-family:"SimHei";
+            font-weight:normal;
+          }
+          .bottom p{
+            font-size:12px;
+            margin-top:10px;
+            line-height: 20px;
+            color:#cacbcc;
+          }
+          .bottom .rect{
+            text-align:left;
+            line-height: 40px;
+            color:#bdbdbd;
+            margin:auto;
+            margin-top:30px;
+            width:510px;
+            height:40px;
+            background-color: #fff;
+            text-indent:10px;
+            margin-bottom: 30px;
+          }
+          .bottom .rect .right{
+            display:block;
+            float:right;
+            height:40px;
+            width:80px;
+            background-color: #6f7178;
+            color:#fff;
+            text-align:center;
+            text-indent:0px;
+            cursor:pointer;
+          }
+          .bottom a{
+            margin-right:30px;
+          }
+          .bottom .bottom-bottom{
+            height:60px;
+            width:100%;
+            background-color: #303039;
+            position:relative;
+            top:55px;
+            
+            font-size:12px;
+            color:#fff;
+          }
+          .bottom .bottom-bottom p{
+            line-height: 60px;
+            text-indent:60px;
+            width:100%;
+            text-align:left;
+          }
+           .bottom .bottom-bottom p span{
+            float:right;
+            display:block;
+            text-align:right;
+            margin-right:60px;
+           }
+
+    	</style>
+    </head>
+    <body>
+    	<div class="head">
+    	<div class="top-logo">
+    		<img src="images/task_1_7_1_03.png" alt="产品logo" />
+    		<span>新世界</span>
+    	</div>
+    	<ul>   		    	   		  
+    		<li class="icon">登录</li>                                              
+            <li>关于我们</li>
+            <li>爱心社区</li>
+            <li>项目介绍</li>
+            <li>最新活动</li>
+            <li class="page">首页</li>
+    	</ul>
+    </div>
+    <div class="body-margin">
+    <div class="body1">
+    	<h1>Time of new life</h1>
+    	<p>新时代，年轻的人们让我们一起<br />体验新生活，享受新生活</p>
+    	<a href="#" id="button">开始体验</a>
+    </div>
+    <div class="body2">
+    	<ul class="img">
+    		<li class="img1"><img src="images/task_1_7_1_14.png" /></li>
+    		<li><img src="images/task_1_7_1_16.png" /></li>
+    		<li><img src="images/task_1_7_1_18.png" /></li>
+    		<li><img src="images/task_1_7_1_11.png" /></li>
+    	</ul>
+    	<ul class="text">
+    		<li>打造全新世界观，让你更<br />爱你的生活</li>
+    		<li>丰富多彩的公益活动，发<br />挥新世界的主人公意识</li>
+    		<li>时尚的新理念，超前体验<br />未知的生活</li>
+    		<li class="text1">完善的培养机制，培养你<br />全新的世界观</li>
+    	</ul>
+</div>
+     <div class="body3">
+     	<img src="images/task_1_7_1_25.png" />
+     	<h1>关于新世界，你不知道的还有什么？</h1>
+     </div>
+     <div class="body4">
+     	<h2>查找新世界城市活动信息</h2>
+        <div class="rect"></div>
+     	<p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+     	<input type="text"  placeholder="中国" class="text" id="text"/>
+            <input type="text"  placeholder="省份" class="text"/>     
+     	<input type="text"  placeholder="城市" class="text"/>
+     	<input type="button"  value="搜索" class="click"/>
+         <ul>
+                <li>北京市</li>
+                <li>天津市</li>
+                <li>河北省</li>
+                <li>陕西省</li>
+                <li>内蒙古自治区</li>
+                <li>辽宁省</li>
+            </ul>
+     </div>
+
+     <div class="body5">
+     	<div class="photo">
+     		<img src="images/task_1_7_1_29.png" />
+     		<h3>北京活动</h3>
+     		<p>新社区大联盟</p>
+     	</div>
+     	<div class="photo">
+     		<h3 class="shanghai">上海活动</h3>
+     		<p>新社区大联盟</p>
+     		<img src="images/task_1_7_1_37.png" />
+
+     	</div>
+     	<div class="photo">
+     		<img src="images/task_1_7_1_32.png" />
+     		<h3>深圳活动</h3>
+     		<p>新社区大联盟</p>
+     	</div>
+     	<div class="photo">
+     		<img src="images/task_1_7_1_34.png" />
+     		<h3>香港活动</h3>
+     		<p>新社区大联盟</p>
+     	</div>
+     </div>
+
+     <div class="body6">
+     	<div class="left">
+            <section class="body6-text">
+     		<h2>新世界</h2>
+     		<h1>TIME</h1>
+     		<p>@新世界－北京<br />
+2016.04.01</p>
+</section>
+     	</div>
+     	<div class="right">
+            <div class="right-center">
+     		<h2>新世界/<span>01</span></h2>
+     		<p>新世界是个新世界新世界是个新世界新世界是个新世界<br />
+             新世界是个新世界新世界是个新世界新世界是个新世界<br />
+             新世界是个新世界新世界是个新世界新世界是个新世界<br />
+             新世界是个新世界新世界是个新世界新世界是个新世界</p>
+             <a href="#" class="xiangqing">更多详情</a>
+              <a  href="#"><img src="images/task_1_7_1_46.png" /></a>
+         </div>
+     	</div>
+     </div>
+
+     <div class="body7">
+     	<div class="left">
+     		<h5>新时代<br />关于爱<span>生活</span>的我们</h5>
+     		<input type="button" value="查看更多" />
+     	</div>
+     	<div class="center">
+     		<h5>新时代<br />关于爱<span>生活</span>的我们</h5>
+     		<input type="button" value="查看更多" />
+     	</div>
+     	<div class="right">
+     		<img src="images/task_1_7_1_50.png"/>
+     	</div>
+     </div>
+     <div class="body8">
+     	<div class="head-text">
+     		<h1>成为我<span>们的</span>志愿者</h1>
+     		<p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br />
+那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+     	</div>
+
+     	<div class="body-text">
+     		<div class="left-text">
+     			<div class="text">
+     				<h5>新世界志愿者协议</h5>
+     				<p>加入新世界志愿者的人员必须遵守中华人民共共和国的
+相关法律法规，并且本着平等资源的原则 ......<br /><span>more</span><p>
+     			</div>
+
+     			<div class="text">
+     				<h5>新世界志愿者权利</h5>
+     				<p>新世界志愿者享受新世界内部所有资源共享的权利，并
+且享受所在四新世界活动的优先参与资格<br /><span>more</span><p>
+     			</div>
+
+     			<div class="text">
+     				<h5>更多条款<br /></h5>
+                    <p><span>more</span><p>
+     			</div>
+     		</div>
+     			<div class="right-text">
+     			<input type="text" placeholder="姓名：" />
+     			<input type="text" placeholder="年龄：" />
+     			<input type="text" placeholder="联系方式：" />
+     			<input type="text" placeholder="联系地址：" />
+     			<textarea placeholder="请简单描述您梦想的生活："></textarea>
+                <input type="button" value="提交申请" id="shengqing" />
+     		</div>
+     	</div>
+     </div>
+
+     <div class="bottom">
+         <h2>联系我们</h2>
+         <p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br />
+也可以通过以下任何方式关注我们动态</p>
+<div class="rect">
+    <span class="left">864457005@qq.com</span>
+    <span class="right">提交</span>
+</div>
+        <a href="#"><img src="images/task_1_7_1_54.png" /></a>
+        <a href="#"><img src="images/task_1_7_1_56.png" /></a>
+        <a href="#"><img src="images/task_1_7_1_58.png" /></a>
+        <a href="#"><img src="images/task_1_7_1_60.png" /></a>
+        <div class="bottom-bottom">
+            <p>@2016新世界<span>Back to top</span><p>
+                
+        </div>
+     </div>
+</div>
+    </body>
+    </html>
