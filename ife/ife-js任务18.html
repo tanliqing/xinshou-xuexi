@@ -64,9 +64,9 @@ window.onload=function(){
 
       var rightDele = document.getElementById("right-dele");
       rightDele.onclick = function(){
-        var rightNum =ul.lastChild.innerText;
+        var rightNum =ul.lastElementChild.innerText;
         alert(rightNum);
-        ul.removeChild(ul.lastChild);
+        ul.removeChild(ul.lastElementChild);
       }
    }
    
