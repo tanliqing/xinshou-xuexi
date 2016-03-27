@@ -1,0 +1,59 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>flexbox布局</title>
+	<style>
+	body,.fiexbox{
+		margin:0;
+		padding:0;
+	}
+    .fiexbox{
+    	display:flex;
+    	align-items:center;
+    	justify-content:space-between;
+    }
+    li{
+    	width:150px;
+        background-color:#f00;
+        list-style:none;
+    }
+    .box1{
+    	height:120px;
+    	
+    }
+    .box2{
+    	height:100px;
+    }
+    .box3{
+    	height:40px;
+    }
+    .box4{
+    	
+    	height:200px;
+    	background-color: #0f0;
+    }
+    @media screen and (max-width:640px){
+    	.fiexbox{
+    		align-items:flex-start;
+    	    flex-wrap:wrap;
+    	}
+    	.box4{
+    		order:-1;
+    	}
+    }
+
+	</style>
+</head>
+<body>
+
+	<ul class="fiexbox">
+		<li class="box1">1</li>
+		<li class="box2">2</li>
+		<li class="box3">3</li>
+		<li class="box4">4</li>
+	</ul>
+	
+
+</body>
+</html>
