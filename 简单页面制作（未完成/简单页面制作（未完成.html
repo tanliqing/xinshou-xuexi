@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>一个简单的页面</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.head{
+		background-color:#424141;
+		width:100%;
+		height:60px;
+		position:relative;
+	}
+	.head img{
+		margin:20px;
+	}
+	.head .head-right{
+		position:relative;
+		margin-top:-45px;
+	}
+	.head .head-right li{
+		float:right;
+        margin-right:25px;
+	}
+	.head .head-right li a{
+		font-size:18px;
+		color:#fff;
+		text-decoration:none;
+	}
+	.right-body{
+		position:relative;
+		float:right;
+		margin-right:20px;
+		margin-top:20px;
+		width:400px;
+		
+		background-color:#fff;
+		border:2px solid #ccc;
+	}
+	.right-body .title{
+		border-left:3px solid #ccc;
+		padding-left:20px;
+	}
+	.right-body div{
+		margin:20px;
+	}
+   .right-body .left{
+   	    display:inline-block;
+		width:40%;
+		text-align:right;	
+	}
+	.right-body .left2{
+		display:block;
+		text-align:left;
+		margin:10px 0 20px 0;
+		margin-left:43%;
+		color:#ccc;
+	}
+	.right-body .miaoshu{
+        position:relative;
+	}
+		.right-body .miaoshu .left{
+		position:relative;
+		top:-105px;
+	}
+	.right-body textarea{
+      height:120px;
+      width:181px;
+	}
+	#tijiao{
+		width:80%;
+		background-color:#085d8e;
+		height:50px;
+		margin-left:10%;
+		border-radius:10px;
+
+	}
+	
+
+	</style>
+</head>
+<body>
+	<div class="head">
+		<img scr="#" alt="此处放LOGO" />
+		<ul class="head-right">
+			<li><a href="#">导航链接一</a></li>
+			<li><a href="#">导航链接一</a></li>
+			<li><a href="#">导航链接一</a></li>
+			<li><a href="#">导航链接一</a></li>
+		</ul>
+	</div>
+    <div class="right-body">
+    	<div class="title">
+    		<h4>这里以后是一个侧栏，这是侧栏的标题</h4>
+    	</div>
+    	<div>
+    		<span class="left">请输入邮箱地址</span>
+    		<input type="text" placeholder="这是一个文本输入框" />
+    		<span class="left2">邮箱地址请按要求格式输入</span></div>
+    	<div>
+    		<span class="left">请输入密码</span>
+    		<input type="password" placeholder="请输入密码" />
+    	</div>
+    	<div>
+    		<span class="left">请重复输入密码</span>
+    		<input type="password" placeholder="请重复输入密码" />
+    		<span class="left2">密码请为6-16位英文数字</span>
+    	</div>
+        <div>
+        	<span class="left">性别</span>
+        	<label>男<input type="radio" name="sex" /></label>
+            <label>女<input type="radio" name="sex" /></label>
+        </div>
+        <div>
+        	<span class="left">城市</span>
+        	<select>
+        		<option>北京</option>
+        		<option>上海</option>
+        		<option>广州</option>
+        		<option>深圳</option>
+        		<option>厦门</option>
+        	</select>
+    </div>
+        <div>
+        	<span class="left">爱好</span>
+        	<label>DOTA2<input type="checkbox" name="hobby" /></label>
+            <label>LOL<input type="checkbox" name="hobby" /></label>
+            <label>COC<input type="checkbox" name="hobby" /></label>
+	</body>
+	<div class="miaoshu">
+		<span class="left">个人描述</span>
+		<textarea placeholder="这是一个长文本框，请输入你的个人描述"></textarea>
+	</div>
+	<div>
+		<input type="button" value="确认提交" id="tijiao" />
+	</div>
+</html>

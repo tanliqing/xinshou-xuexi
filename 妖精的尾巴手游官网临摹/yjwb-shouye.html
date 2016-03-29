@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+     <title>妖精的尾巴</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <link rel="icon" type="image/icon" href="img/favicon.ico" />
+
+     <style type='text/css'>
+     *{
+     	margin:0;
+     	padding:0;
+          list-style:none;     
+          font-weight: inherit; 
+          font-style: inherit; 
+          font-family: "Microsoft YaHei", "微软雅黑", Arial; 
+          vertical-align: baseline; 
+     }
+     body{
+         
+          background:#201d26 url("img/bg_top.jpg") top no-repeat;
+     }
+     .top_gps{
+          width:100% auto;
+          padding:0px 180px;
+     }
+     .an4{
+          margin-left:230px;
+     }
+     .an1,.an2,.an3,.an4,.an5,.an6,.daohan1,.daohan2,.daohan3,.daohan4{
+           cursor: pointer;
+     }
+     
+     .xiazaitj{
+          positon:absolute;
+          margin-top:360px;
+          margin-left:165px;
+          width:1000px;
+          height:300px;
+         
+     }
+     .xiazaitj .xiazai{
+          width:230px;
+          height:190px;
+     }
+     .xiazaitj .ma{
+          float:left;
+          margin-left:228px;
+          margin-top:-190px;
+     }
+     .xiazaitj .gift1{
+          float:left;
+          margin-top:-175px;
+          margin-left:384px;
+     }
+     .xiazaitj .plat{
+          float:left;
+          margin-top:-118px;
+          margin-left:382px;
+     }
+     #body{
+         width:1005px;
+         height:500px;
+         margin:auto;    
+         
+}
+.zonghe{
+     background-color:#3e3c47;
+     height:240px;
+     width:428px;
+     float:right;
+     margin-top:-244px;
+     font-size:16px;
+  
+}
+.zonghe .daohangtop{
+  height:43px;
+  width:410px;
+  border-bottom:1px solid #fff;
+}
+.zonghe .daohangtop li{
+     font-size:16px;
+     color:#fff;
+     float:left;
+     padding:4px 30px 0px 10px;
+     margin-left:10px;
+     line-height:39px;
+     text-align:center;
+}
+.neir1,.neir2,.neir3,.neir4{
+  line-height:35px;
+  color:#fff;
+  font-size:14px;
+  border-top:1px solid #fff;
+  height:150px;
+  width:400px;
+  margin:40px  10px;
+} 
+.lunbotu{
+     margin-top:8px;
+     height:244px;
+     width:565px;
+     position:relative;
+     overflow:hidden;
+}
+.slider li{
+  float:left;
+}
+.lunbotu .num{
+  position:absolute;
+  right:20px;
+  bottom:10px;
+}
+.lunbotu .num li{
+  float:left;
+  margin:10px;
+  cursor:pointer;
+  width:15px;
+  height:15px;
+  border-radius:15px;
+  background-color: #fff
+}
+.lunbotu .num .on{
+  background-color: #000
+}
+.neir1,.neir2,.neir3,.neir4{
+  position:absolute;
+  left:-999px;
+}
+#daohan1:hover{
+  font-size:20px;
+  border-bottom:2px solid #fff;
+}
+#daohan1:hover .neir1{
+  left:740px;
+  top:915px;
+}
+     </style>
+     <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+</head>
+<body>
+     <div class="top_gps">
+          <img class="an1" src="img/header_01_a.png">
+          <img class="an2" src="img/header_02.png">
+          <img class="an3" src="img/header_03.png">
+          <img class="an4" src="img/header_04.png">
+          <img class="an5" src="img/header_05.png">
+          <img class="an6" src="img/header_06.png">
+     </div>
+<!-- 顶部导航栏 -->
+     <div class="xiazaitj">
+          <div class="xiazai">
+          <img class="anzhuo" src="img/btn_andriod.png">
+          <img class="ios" src="img/btn_iOS.png">
+     </div>
+          <img class="ma" src="img/ma.png"> 
+          <img class="plat" src="img/plat.png">
+           <img class="gift1" src="img/gift1.png">
+     </div>
+     <div id="body">
+          <div class="banner">
+               <img src="img/banner1.jpg">
+               <img src="img/banner2.jpg">
+               <img src="img/banner3.jpg">
+               <img src="img/banner4.jpg">
+     </div>
+          <div class="lunbotu" id="scrollPics">
+               <ul class="slider">
+                 <li><img src="img/b279af8d8f6cfdcdf25d86750f56edf9.jpg" alt=""></li>
+                 <li><img src="img/8e48398f952f3e88482cf61e6920d6a6.jpg" alt=""></li>
+                 <li><img src="img/21abc730eae6e5e2e3afd784d5fa41ec.jpg" alt=""></li>
+                 <li><img src="img/54c2173815306ec140f5e862205013f8.jpg" alt=""></li>
+               </ul>
+               <ul class="num" >
+                       <li class="on"></li>
+                       <li></li>
+                       <li></li>
+                       <li></li>
+
+                   </ul>
+          </div>
+          <div class="zonghe">
+          <ul class="daohangtop">
+               <li id="daohan1">综合<ul class="neir1">
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                   </ul></li>
+               <li class="daohan2">新闻</li>
+               <li class="daohan3">公告</li>
+               <li class="daohan4">活动</li>
+          </ul>
+                   <ul class="neir2">
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                   </ul>
+                   <ul class="neir3">
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                   </ul>
+                   <ul class="neir4">
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                        <li>◇【活动】召集最强魔导士 限量手办疯狂送</li>
+                   </ul>
+                 </div>
+  <script>
+       //滚动广告
+    var len = $(".num > li").length;
+    var index = 0;  //图片序号
+    var adTimer;
+    $(".num li").mouseover(function() {
+        index = $(".num li").index(this);  //获取鼠标悬浮 li 的index
+        showImg(index);
+    });
+    //滑入停止动画，滑出开始动画.
+    $('#scrollPics').hover(function() {
+        clearInterval(adTimer);
+    }, function() {
+        adTimer = setInterval(function() {
+            showImg(index)
+            index++;
+            if (index == len) {       //最后一张图片之后，转到第一张
+                index = 0;
+            }
+        }, 4000);
+    }).trigger("mouseleave");
+ 
+    function showImg(index) {
+        var adWdth = $("#scrollPics>ul>li:first").width();
+        $(".slider").stop(true, false).animate({
+            "marginLeft": -adWdth * index + "px"    //改变 marginTop 属性的值达到轮播的效果
+        }, 1);
+        $(".num li").removeClass("on")
+            .eq(index).addClass("on");
+    }
+
+  </script>
+	</body>
+</html>
