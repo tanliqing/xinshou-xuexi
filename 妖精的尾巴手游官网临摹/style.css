@@ -74,6 +74,7 @@ body{
 	height:150px;
 	margin-top:390px;
 	margin-bottom: 140px;
+	position:relative;
 }
 .download .left{
     width:223px;
@@ -82,6 +83,25 @@ body{
 .download .center1{
 	float:left;
 	margin:0 5px;
+	
+}
+.guding{
+position:absolute;
+left:7px;
+top:70px;
+z-index:-1;
+}
+.enlarge{
+	position:absolute;
+	top:10px;
+	left:8px;
+}
+.enlarge:hover{
+   position:absolute;
+   width:95px;
+   height:80px;
+   top:5px;
+   left:4px;
 }
 .download .right{
 	float:left;
