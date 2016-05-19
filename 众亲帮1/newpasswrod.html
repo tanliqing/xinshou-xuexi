@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>修改密码</title>
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/register.css" />
+</head>
+<body>
+<form action="" class="register"  id="password">
+    <label><i class="iconfont">&#xe60c;</i><input type="password" placeholder="请输入现有密码"> </label>
+    <label><i class="iconfont">&#xe608;</i><input type="password" placeholder="请输入6~32位的新密码"></label>
+    <label><i class="iconfont">&#xe608;</i><input type="password" placeholder="再次输入新密码"></label>
+</form>
+
+<div class="enter">
+    <a href="" id="affirm">确认</a>
+</div>
+<script>
+    var passWord = document.getElementById("password").getElementsByTagName("input"),
+            affirm = document.getElementById("affirm");
+    affirm.onclick = function(){
+        for(var i= 0,item=passWord.length;i<item;i++){
+            if(passWord[i].value==""){
+                alert("密码输入不完整，请继续输入");
+                return false;
+            }
+        }
+        if(passWord[1].value != passWord[2].value){
+            alert("两次密码输入不一致，请重新输入");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

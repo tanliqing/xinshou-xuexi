@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>众亲帮-邮件</title>
+    <link rel="stylesheet" href="css/feedback.css" />
+</head>
+<body>
+<input id="addressee" type="text" placeholder="收件人：" />
+<input id="theme" type="text" placeholder="主题：" />
+<textarea placeholder="请输入您要发送的内容" id="details"></textarea>
+<a href="" id="submit">发送邮件</a>
+<script>
+    (function(){
+        var details = document.getElementById("details"),
+                addressee = document.getElementById("addressee"),
+                theme = document.getElementById("theme"),
+                submit = document.getElementById("submit");
+        submit.onclick = function(){
+
+            if(details.value == ""){
+                alert("未输入内容，请重新填写");
+                return false;
+            }
+            else if(theme.value == ""){
+                alert("未输入内容，请重新填写");
+                return false;
+            }
+            else if(addressee.value == ""){
+                alert("未输入内容，请重新填写");
+                return false;
+            }
+
+        }
+
+    })()
+</script>
+</body>
+</html>

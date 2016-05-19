@@ -1,0 +1,79 @@
+
+.portrait img{
+    border-radius: 35px;
+    height: 30px;
+    position: relative;
+    top:7px;
+    width: 30px;
+}
+.portrait .iconfont{
+    color:#ea8010;
+}
+.main li,.bound li{
+    border-bottom: 1px solid #d7d7d7;
+
+    line-height: 40px;
+    padding: 0 3%;
+    position: relative;
+}
+.main li:nth-child(2){
+    background:url(../images/icong_03.png) no-repeat 3% 112%;
+    background-size:21px;
+    text-indent: 25px;
+}
+.main li:nth-child(3){
+    background:url(../images/icong_03.png) no-repeat 3% 49%;
+    background-size:21px;
+    text-indent: 25px;
+}
+.main li:nth-child(4){
+      margin: 20px 0;
+      border-top:1px solid #d7d7d7;
+  }
+.main li:nth-child(5){
+    border-top:1px solid #d7d7d7;
+}
+.main li:nth-child(7){
+    background:url(../images/icong_03.png) no-repeat 3% -13%;
+    background-size:21px;
+    text-indent: 25px;
+}
+.main li:nth-child(4) a>.iconfont{
+     color:#00bb9c;
+
+ }
+.main li:nth-child(5) a>.iconfont{
+    color:#56abe4;
+}
+.main li:nth-child(6) a>.iconfont{
+    color:#eb4f38;
+}
+.main li> a{
+    display: block;
+}
+.main li> a>.iconfont{
+    margin-right: 5px;
+    font-size: 22px;
+}
+.main li span ,.bound li span{
+   position: absolute;
+   right:15px;
+    color:#adadad;
+}
+.bound li span .iconfont{
+
+    color:#d2d2d2;
+    font-size: 20px;
+}
+.bound li .bound > .iconfont{
+    color:#b738da;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

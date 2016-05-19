@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>邮箱绑定</title>
+    <link rel="stylesheet" href="css/alter.css" />
+</head>
+<body>
+<input placeholder="输入邮箱号" class="cell" id="mailbox"/>
+<a href="" id="bound">绑定</a>
+<script>
+    var bound = document.getElementById("bound");
+    bound.onclick = function(){
+        var reg = /\w+((-w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+/,
+                mailbox = document.getElementById("mailbox").value;
+        if(!reg.test(mailbox)){
+            alert("请输入正确的邮箱");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

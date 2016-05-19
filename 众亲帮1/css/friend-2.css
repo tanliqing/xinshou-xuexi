@@ -1,0 +1,25 @@
+
+.friend-2{
+    margin-top: 15px;
+    padding: 0 3%;
+    font-size: 20px;
+}
+.friend-2 >.iconfont{
+    cursor: pointer;
+    font-size:inherit;
+    color:#2b9ee0;
+    font-weight: 600;
+}
+.friend-2 >input{
+    width:80%;
+    font-size:inherit;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

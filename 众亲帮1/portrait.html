@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>更换头像</title>
+    <link rel="stylesheet" href="css/webuploader.css" />
+    <link rel="stylesheet" href="css/portrait.css" />
+
+</head>
+<body>
+<div class="me-i">
+    <img src="images/body.png" alt="头像" id="portrait"/>
+    <h1>这是名字</h1>
+</div>
+<div class="discuss" id="discuss">
+    <div id="uploader-demo">
+        <!--用来存放item-->
+        <div id="fileList" class="uploader-list"></div>
+        <div id="filePicker" class="webuploader-pick2">选择图片</div>
+    </div>
+</div>
+<ul class="t-img" id="choice">
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li><li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li><li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+    <li><img src="images/123.png" alt=""><span class="default"></span></li>
+
+
+</ul>
+<a href="" class="affirm">确认更换</a>
+<script>
+    var choice = document.getElementById("choice").getElementsByTagName("li"),
+            portrait = document.getElementById("portrait");
+    for(var i= 0,item=choice.length;i<item;i++) {
+        var tImg = choice[i].getElementsByTagName("span");
+        choice[i].onclick = function () {
+            for (var k = 0, item = choice.length; k < item; k++) {
+                choice[k].getElementsByTagName("span")[0].className = "default" ;
+            }
+            this.getElementsByTagName("span")[0].className = "pitch";
+            portrait.setAttribute("src",this.getElementsByTagName("img")[0].src);
+        }
+    }
+
+</script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/webuploader.html5only.min.js"></script>
+<script src="js/portrait.js"></script>
+</body>
+</html>

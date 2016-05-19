@@ -1,0 +1,91 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td,input,textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    border:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: "Microsoft YaHei";
+    color:#9c9c9c;
+}
+input{
+    color:#9c9c9c;
+}
+.label{
+    margin: 0 3%;
+    border:1px solid #ebebeb;
+    line-height: 40px;
+    position: relative;
+}
+.label >span {
+    position: absolute;
+    right: 10px;
+
+    cursor: pointer;
+    display: block;
+    top: 5px;
+    height: 30px;
+
+    padding: 0 10px;
+}
+h4{
+    padding: 0 3%;
+}
+.label-b{
+    width:94%;
+    margin:0 auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+
+}
+.label-b li{
+  display: inline-block;
+    width:20%;
+    margin-right: 3%;
+   text-align: center;
+    background-color: #d798eb;
+    border-radius: 3px;
+    margin-top:10px;
+    line-height: 25px;
+    color: #fff;
+    position: relative;
+}
+.label-b li span{
+    background-color: #fff;
+    border-radius: 50px;
+    color: #d798eb;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 15px;
+    line-height: 18px;
+    position: absolute;
+    right: 1px;
+    top: 3px;
+    width: 15px;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

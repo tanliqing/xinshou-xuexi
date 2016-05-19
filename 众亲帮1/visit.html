@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>众亲帮-会员展</title>
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/visit.css" />
+
+</head>
+<body>
+<div class="head" id="head">
+    <div class="second-h">
+        <img src="images/body.png" alt="头像" />
+        <h2>小强啊啊啊啊</h2>
+        <span class="new-v">加好友</span>
+        <span class="mail"><i class="iconfont">&#xe668;</i></span>
+    </div>
+        <ul class="label" id="label">
+            <li>旅游</li>
+            <li>旅游</li>
+            <li>旅游</li>
+            <li>旅游</li>
+            <li>旅游</li>
+            <li>旅游</li>
+        </ul>
+        <div class="datum" id="datum">
+            <h4>个人简介</h4>
+            <p>厦门蓝天网科技有限公司 CEO</p>
+            <h4>个人资料</h4>
+            <p>手机号：<span>13352542245</span></p>
+            <p>微信：<span>Csme—</span></p>
+            <p>邮箱：<span>25152@Foxmail.com</span></p>
+        </div>
+    <div class="more"  id="more"><i class="iconfont">&#xe653;</i></div>
+</div>
+<div class="selected">
+    <div>
+        <a href=""><img src="images/zc1.png" alt=""></a>
+        <div>
+            <a href=""><h4>护车狗i8智能行车记录仪 语音
+                拍照手势感应wifi</h4></a>
+            <p>已筹金额:<span>￥25123.00</span><span>剩余<span>5天</span></span></p>
+            <p><span></span><span></span><span></span><span></span><span></span><span></span>956人支持</p>
+        </div>
+    </div>
+    <div>
+        <a href=""><img src="images/zc1.png" alt=""></a>
+        <div>
+            <a href=""><h4>护车狗i8智能行车记录仪 语音
+                拍照手势感应wifi</h4></a>
+            <p>已筹金额:<span>￥25123.00</span><span>剩余<span>5天</span></span></p>
+            <p><span></span><span></span><span></span><span></span><span></span><span></span>956人支持</p>
+        </div>
+    </div>
+</div>
+<div class="selected2">
+    <div class="tour">
+        <a href="">
+            <span class="number4">报名人数：<span>99</span>人</span>
+            <h3>五一集体AA出游</h3>
+            <div>
+                <span>时间：<span>2016/04/28-2016/05/04</span></span>
+                <span>地点：<span>北京市延庆县八达岭镇八达岭风景区</span></span>
+            </div>
+            <img src="images/lvyou.png" alt="" />
+        </a>
+    </div>
+</div>
+<section class="b-nav">
+    <ul>
+        <li><a href="">众亲众筹</a></li>
+        <li><a href="">众亲项目</a></li>
+        <li><a href="">众亲好友</a></li>
+        <li><a href="">我的项目</a></li>
+    </ul>
+</section>
+<script>
+    (function(){
+        var head = document.getElementById("head"),
+                label =   document.getElementById("label").getElementsByTagName("li"),
+                datum = document.getElementById("datum"),
+                more = document.getElementById("more"),
+                item = false;
+       window.onload = function(){
+           more.className = "more";
+           datum.style.display = "none";
+           for(var i= 4,u=label.length;i<u;i++){
+               label[i].className = "none";
+
+           }
+       }
+
+        more.onclick = function(){
+            if(item == true){
+                more.className = "more";
+                datum.style.display = "none";
+            for(var i= 4,u=label.length;i<u;i++){
+                label[i].style.display = "none";
+                 }
+                item = false;
+            }else{
+                more.className = "more more1";
+                datum.style.display = "block";
+
+                for(var i= 4,u=label.length;i<u;i++){
+                    label[i].style.display = "inline-block";
+                }
+                item = true;
+            }
+        }
+
+    })()
+</script>
+</body>
+</html>

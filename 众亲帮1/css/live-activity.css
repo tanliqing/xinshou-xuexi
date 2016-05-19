@@ -1,0 +1,92 @@
+.selected{
+    padding: 0 3%;
+    margin-top:50px;
+    box-sizing: border-box;
+    width:100%;
+}
+.m-bottm{
+    margin-bottom: 60px;
+}
+.selected ul{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 15px;
+}
+.current{
+    color:#d31f49;
+}
+.selected ul span{
+    color:#ccc;
+}
+.search2{
+    background-color: #d31f49;
+}
+.search2 > div > .iconfont {
+    color: #d31f49;
+}
+.search2 > li{
+    cursor: pointer;
+}
+.tour{
+    position: relative;
+    border-radius: 5px;
+    margin-top:10px;
+}
+.tour a> img{
+    width: 100%;
+}
+.tour a>span,.tour a>h3,.tour a>div{
+    position: absolute;
+    color:#fff;
+}
+.tour a>h3{
+    left:10px;
+    bottom: 50px;
+    font-size: 18px;
+}
+.tour a>div>span{
+    display: block;
+}
+.tour a>div{
+    padding-left: 4px;
+    border-left:4px solid #d31f49;
+    left: 12px;
+    bottom: 10px;
+    font-size: 12px;
+}
+.selected2{
+    margin-bottom: 50px;
+}
+.number{
+    padding-left: 30px;
+    top: 10px;
+    left:15px;
+    background: url(../images/icon4_03.png) no-repeat 1% 1%;
+}
+.number2{
+    padding-left: 30px;
+    top: 10px;
+    left:85px;
+    background: url(../images/icon4_03.png) no-repeat 160% 1%;
+}
+.number3{
+    padding-left: 30px;
+    top: 10px;
+    right:15px;
+    font-size: 12px;
+}
+.number4{
+    padding-left: 30px;
+    bottom: 50px;
+    right:15px;
+    font-size: 18px;
+}
+\input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

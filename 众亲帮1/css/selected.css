@@ -1,0 +1,84 @@
+.selected{
+    padding: 0 3%;
+    margin-top:50px;
+    box-sizing: border-box;
+    width:100%;
+    margin-bottom: 60px;
+}
+.selected ul{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 15px;
+}
+.current{
+    color:#2b9ee0;
+}
+.selected ul span{
+    color:#ccc;
+}
+.selected >div{
+    margin-top: 15px;
+    position: relative;
+}
+.selected> div>div,.selected> div>div{
+    display: inline-block;
+}
+.selected>div>a>img{
+    width:40%;
+    border-radius: 5px;
+}
+.selected> div>div{
+    width:59%;
+   position: absolute;
+    right:0;
+    height:96%;
+
+}
+.selected> div>div h4{
+    font-size: 14px;
+    line-height: 18px;
+}
+.selected> div>div p:nth-child(2){
+    margin-top: 5px;
+    color:#797878;
+    font-size:12px;
+}
+.selected> div>div p:nth-child(2) > span:nth-child(1){
+    color:#ed2828;
+    font-size:12px;
+}
+.selected> div>div p:nth-child(2) > span:nth-child(2){
+    position: absolute;
+    right:0;
+    padding-left:30px ;
+    background:url(../images/icon_04.png) no-repeat 25%;
+    background-size:14px;
+}
+.selected> div>div p:nth-child(3){
+    color: #797878;
+    position: absolute;
+    bottom:-5px;
+    width: 100%;
+    text-align: right;
+    line-height: 30px;
+    font-size: 12px;
+}
+.selected> div>div p:nth-child(3)>span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon_03.png);
+    position: relative;
+    top: 3px;
+    background-size: 18px;
+    right: 10px;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

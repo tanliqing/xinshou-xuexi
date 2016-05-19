@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>众亲帮-标签</title>
+    <link rel="stylesheet" href="css/label.css" />
+</head>
+<body>
+<div class="label">
+    <input type="text" name="" id="label"/>
+    <span id="label-t">贴上</span>
+</div>
+<ul class="label-b">
+    <li>旅游 <span>×</span></li>
+    <li>旅游 <span>×</span></li>
+    <li>旅游 <span>×</span></li>
+    <li>旅游 <span>×</span></li>
+    <li>旅游 <span>×</span></li>
+    <li>旅游 <span>×</span></li>
+</ul>
+<h4>修改昵称</h4>
+<div class="label">
+    <input type="text"  name="" id="l-name"/>
+    <span id="lnamet">确定</span>
+</div>
+<script>
+    (function(){
+        var label = document.getElementById("label"),
+                labelT =   document.getElementById("label-t"),
+                lName = document.getElementById("l-name"),
+                NameT = document.getElementById("lnamet");
+        console.log(NameT);
+        labelT.onclick  = function(){
+            if(label.value == ""){
+                alert("标签不能为空！");
+                return false;
+            }
+        }
+        NameT.onclick  = function(){
+            if(lName.value == ""){
+                alert("名字不能为空！");
+                return false;
+            }
+        }
+    })()
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+.release{
+    margin-top:60px;
+}
+input,textarea{
+    font-family: inherit;
+}
+.release >label,.release>textarea,.release>input{
+    margin: 0 3%;
+}
+.release >label>input{
+    width: 75%;
+    margin-left: 2%;
+}
+.release >label{
+    line-height: 35px;
+    border-bottom: 1px solid #bdbdbd;
+}
+.release>textarea{
+    border: 1px solid #bdbdbd;
+    margin:15px 3%;
+    width: 94%;
+    height:200px;
+}
+.release >label,.release>textarea,.release>a{
+    display: block;
+}
+.release>input{
+    margin-bottom:15px;
+}
+.release>a{
+    text-align: center;
+    background-color: #2b9ee0;
+    line-height: 50px;
+    color:#fff;
+    font-size: 20px;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

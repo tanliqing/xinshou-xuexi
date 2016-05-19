@@ -1,0 +1,200 @@
+.selected{
+    padding: 0 3%;
+    margin-top:50px;
+    box-sizing: border-box;
+    width:100%;
+    margin-bottom: 60px;
+}
+.selected ul{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 15px;
+}
+.current{
+    color:#2b9ee0;
+}
+.selected ul span{
+    color:#ccc;
+}
+.selected >div{
+    margin-top: 15px;
+    position: relative;
+}
+.selected> div>div,.selected> div>div{
+    display: inline-block;
+}
+.selected>div>a>img{
+    width:40%;
+    border-radius: 5px;
+}
+.selected> div>div{
+    width:59%;
+    position: absolute;
+    right:0;
+    height:96%;
+
+}
+.selected> div>div h4{
+    font-size: 14px;
+    line-height: 18px;
+}
+.selected> div>div p:nth-child(2){
+    margin-top: 5px;
+    color:#797878;
+    font-size:12px;
+}
+.selected> div>div p:nth-child(2) > span:nth-child(1){
+    color:#ed2828;
+    font-size:12px;
+}
+.selected> div>div p:nth-child(2) > span:nth-child(2){
+    position: absolute;
+    right:0;
+    padding-left:30px ;
+    background:url(../images/icon_04.png) no-repeat 25%;
+    background-size:14px;
+}
+.selected> div>div p:nth-child(3){
+    color: #797878;
+    position: absolute;
+    bottom:-5px;
+    width: 100%;
+    text-align: right;
+    line-height: 30px;
+    font-size: 12px;
+}
+.selected> div>div p:nth-child(3)>span{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/icon_03.png);
+    position: relative;
+    top: 3px;
+    background-size: 18px;
+    right: 10px;
+}
+.tour{
+    position: relative;
+    border-radius: 5px;
+    margin-top:10px;
+}
+.tour a> img{
+    width: 100%;
+}
+.tour a>span,.tour a>h3,.tour a>div{
+    position: absolute;
+    color:#fff;
+}
+.tour a>h3{
+    left:10px;
+    bottom: 50px;
+    font-size: 18px;
+}
+.tour a>div>span{
+    display: block;
+}
+.tour a>div{
+    padding-left: 4px;
+    border-left:4px solid #d31f49;
+    left: 12px;
+    bottom: 10px;
+    font-size: 12px;
+}
+.selected2{
+    margin-bottom: 50px;
+}
+.number4{
+    padding-left: 30px;
+    bottom: 50px;
+    right:15px;
+    font-size: 18px;
+}
+.second-h > img{
+    border-radius: 35px;
+    height: 35px;
+   border:4px solid #89bcd5;
+    width: 35px;
+}
+.second-h{
+    position: relative;
+}
+.second-h > h2{
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    top: 7px;
+    left:50px;
+}
+.head{
+    overflow: hidden;
+    color:#fff;
+    padding: 15px 3% 0 3%;
+    background: -webkit-linear-gradient(#0c60a0, #0d82ad); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(#0c60a0, #0d82ad); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(#0c60a0, #0d82ad); /* Firefox 3.6 - 15 */
+    background: linear-gradient(#0c60a0, #0d82ad); /* 标准的语法（必须放在最后） */
+}
+.new-v{
+    position: absolute;
+    right: 5px;
+    top:0;
+    color: #fff;
+    border: 2px solid #89bcd5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.mail{
+    position: absolute;
+    right: 25px;
+    top: 55px;
+
+}
+.mail .iconfont{
+    font-size: 25px;
+}
+.label {
+    margin-right: 50px;
+    margin-top: 10px;
+}
+.label li{
+    display: inline-block;
+    width: 14%;
+    background-color: #8bc1d7;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+.datum{
+    font-size: 12px;
+}
+.datum > h4{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.more{
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.more1{
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* Internet Explorer */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}
+
+.label >.none{
+    display: none;
+}
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

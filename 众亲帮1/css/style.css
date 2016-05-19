@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3,
+h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot,
+thead, tr, th, td,input,textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    border:none;
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: "Microsoft YaHei";
+}
+.search{
+    background-color:#b738da;
+    position: fixed;
+    top:0;
+    height: 40px;
+    width:100%;
+    box-sizing: border-box;
+    padding: 0 3%;
+    z-index: 999;
+}
+.search > a,.search > div{
+    display: inline-block;
+}
+.search > a{
+    height:30px;
+    position: absolute;
+    top:6px;
+    width:5%;
+
+}
+.search > a:nth-child(2){
+    left:12%;
+}
+.search > a >.iconfont{
+    color:#fff;
+    font-size:24px;
+    margin-right:5px;
+}
+.search > div:nth-child(3){
+    position: relative;
+    height:30px;
+    width:80%;
+    margin-top: 5px;
+    margin-left:20%;
+}
+.search2{
+    background-color: #2b9ee0;
+}
+.search2 >div:nth-child(3){
+    width: 54%;
+}
+
+.search > div >input{
+    height:30px;
+   position: absolute;
+    font-family: "Microsoft YaHei";
+    z-index: 100;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.search > div >.iconfont{
+    position: absolute;
+    font-size: 26px;
+    color:#b738da;
+    right:10px;
+    z-index: 999;
+    cursor: pointer;
+}
+.search2 > div > .iconfont{
+    color: #2b9ee0;
+}
+.search2 > .launch{
+    display: inline-block;
+    height: 40px;
+    right: 0;
+    position: absolute;
+    top: 9px;
+    width: 27%;
+    text-align: center;
+}
+.search2 > .launch > a{
+    font-size: 16px;
+    color:#fff;
+}
+.search2 > .launch > a >.iconfont{
+    color: #fff;
+    font-size: 20px;
+}
+.b-nav{
+    padding: 0 3%;
+    height:60px;
+    width:100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    background-color: #f5f5f5;
+}
+.b-nav > ul{
+    display: flex;
+    justify-content:space-around;
+    font-size: 16px;
+}
+.b-nav > ul > li a{
+    padding-top: 34px;
+    display: block;
+}
+.b-nav > ul > li:nth-child(1)>a{
+    background: url(../images/icon.png) no-repeat -7% 21% ;
+    background-size:25em ;
+}
+.b-nav > ul > li:nth-child(2)>a{
+    background: url(../images/icon.png) no-repeat 29% 21%;
+    background-size:25em ;
+}
+.b-nav > ul > li:nth-child(3)>a{
+    background: url(../images/icon.png) no-repeat 65% 21%;
+    background-size:25em ;
+}
+.b-nav > ul > li:nth-child(4)>a{
+    background: url(../images/icon.png) no-repeat 103% 21%;
+    background-size:25em ;
+}
+.green{
+    background-color: #247f0f;
+}
+.green > div >.iconfont{
+    color:#247f0f;
+}
+
+input,button,select,textarea{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+textarea{resize:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}

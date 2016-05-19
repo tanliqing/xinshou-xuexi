@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="css/feedback.css" />
+</head>
+<body>
+<input type="text" placeholder="意见主题" />
+<!--<input type="text" placeholder="联系方式" />-->
+<textarea placeholder="请输入您要发送的内容" id="details"></textarea>
+<a href="" id="submit">提交意见</a>
+<script>
+    (function(){
+      var details = document.getElementById("details"),
+              submit = document.getElementById("submit");
+        submit.onclick = function(){
+            if(details.value == ""){
+                alert("未输入内容，请重新填写");
+                return false;
+            }
+        }
+
+    })()
+</script>
+</body>
+</html>
