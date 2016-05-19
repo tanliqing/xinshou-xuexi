@@ -9,7 +9,7 @@
 }
 .selected ul{
     display: flex;
-    display: -webkit-box;
+    /*display: -webkit-box;*/
     justify-content:space-around;
     margin-bottom: 15px;
 }

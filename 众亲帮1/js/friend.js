@@ -13,127 +13,127 @@ var oMultiDiff = { "19969": "DZ", "19975": "WM", "19988": "QJ", "20048": "YL", "
 
 var friend = [
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"杀啊啊啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"b你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"a你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"cc你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"哦你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"日你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"累你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"去你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"我你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"额你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"他你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"杀啊啊啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"b你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"a你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"cc你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"哦你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"日你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"累你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"去你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"我你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"额你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"他你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"杀啊啊啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"b你没啊"
     },
     {
-        a:"",//跳转链接，之后补上
+        a:"mail.html",//跳转链接，之后补上
         img:"images/body.png",
         name:"a你没啊"
     },

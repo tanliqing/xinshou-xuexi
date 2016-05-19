@@ -76,12 +76,12 @@ html,body{
 .head{
     position: relative;
 }
-.head > img:nth-child(1){
+.head >a img:nth-child(1){
     height: 35px;
     width: 35px;
     border-radius: 35px;
 }
-.head >h4{
+.head > a h4{
     position: absolute;
     left:40px;
     top:0;
