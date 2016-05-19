@@ -2,6 +2,7 @@
     margin-top: 55px;
     padding: 0 3%;
     list-style: none;
+    margin-bottom: 55px;
 }
 .t-body > li{
     position: relative;
@@ -19,6 +20,6 @@
     line-height: 40px;
     display: block;
     width: 100%;
-    border-radius: 5px;
+
 
 }

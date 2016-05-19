@@ -61,6 +61,8 @@ body{
 .t-img{
     width: 94%;
     margin:0 auto;
+    padding-left: 6%;
+    box-sizing:border-box;
 }
 .t-img>li{
     display: inline-block;

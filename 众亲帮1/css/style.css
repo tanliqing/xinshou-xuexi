@@ -113,7 +113,9 @@ body{
 }
 .b-nav > ul{
     display: flex;
+    display: -webkit-box;
     justify-content:space-around;
+    -webkit-justify-content:space-around;
     font-size: 16px;
 }
 .b-nav > ul > li a{
