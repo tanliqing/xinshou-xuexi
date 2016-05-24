@@ -23,9 +23,16 @@
 .selected> div>div,.selected> div>div{
     display: inline-block;
 }
-.selected>div>a>img{
-    width:40%;
+.selected>div>a>div{
     border-radius: 5px;
+    display: inline-block;
+    height: 100px;
+    overflow: hidden;
+    width: 40%;
+}
+.selected>div>a>div>img{
+    width:100%;
+
 }
 .selected> div>div{
     width:59%;

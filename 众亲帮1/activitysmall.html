@@ -7,42 +7,40 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>众亲帮-众亲项目</title>
-
-    <link rel="stylesheet" href="css/webuploader.css" />
     <link rel="stylesheet" href="css/activitysmall.css" />
 </head>
 <body>
-<div class="head-t">
+<form action="">
+    <input type="file" style="display: none" id="choose" accept="image/*" multiple>
+<div class="head-t" id="head-t">
     <img src="images/ta.png" alt="">
     <input type="text" placeholder="点击编辑标题" />
 </div>
-<form action="">
-<div class="main-b">
-    <div class="new-b"><span>+</span></div>
+
+<div class="main-b" id="main-b">
+    <!--div class="new-b"><span>+</span></div>-->
+    <div class="new-b2">
+        <span class="character">编辑</span>
+        <span class="t-img">上传</span>
+    </div>
     <div class="img-t">
         <div>
-        <img src="images/ta.png" alt="" />
+            <a class="b-img"><img src="images/ta.png" alt="" /></a>
         </div>
         <textarea placeholder="点击添加文字"></textarea>
-        <span>×</span>
+        <span class="delete">×</span>
     </div>
     <div class="new-b2">
         <span class="character">编辑</span>
-        <div class="discuss" id="discuss">
-            <div id="uploader-demo">
-                <!--用来存放item-->
-                <div id="fileList" class="uploader-list"></div>
-                <div id="filePicker" class="webuploader-pick2">选择图片</div>
-            </div>
-        </div>
+        <span class="t-img">上传</span>
     </div>
 </div>
 </form>
-<div class="release">
+<div class="release1">
     <a href="">发布活动</a>
 </div>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/webuploader.html5only.min.js"></script>
-<script src="js/portrait.js"></script>
+<script src="js/activitysmall.js"></script>
 </body>
 </html>

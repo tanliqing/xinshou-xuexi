@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   var con1 = function(){};
+   var con2 = function(){};
+    con1.name1 = 111;
+    con2.prototype = con1;
+    var con3 = new con2();
+
+ /*  console.log(con3.name1);
+    console.log(con2.prototype.name1);
+*/
+   var animal = function(){};
+   var dog = function(){};
+
+   animal.aaa = 2000;//
+   dog.prototype = animal;
+   var tidy = new dog();
+
+   var Singleton = function (name) {
+       this.name = name;
+      // console.log(name);
+   };
+   Singleton.prototype.getName = function () {
+       alert(this.name);
+   };
+
+   //Singleton的静态方法
+   Singleton.getInstance = (function () {
+       var instance;
+       //闭包
+       return function (name) {
+           //假如变量instance不是对象，则创建；否则直接返回对象
+           if (!instance) {
+               instance = new Singleton(name);
+           }
+           return instance;
+       }
+   })();
+
+   var yincst = new Singleton("ccc");
+
+   var a = Singleton.getInstance("xixi");
+   /*console.log(a);
+   var b = Singleton.getInstance("haha");
+   console.log(b);
+   console.log(yincst)*/
+   //alert(a === b);//ture
+
+  var xiaoqiang = {
+      a:function(){
+          console.log("纯");
+      },
+      b:function(){
+          console.acc("dou ");
+      }
+  }
+xiaoqiang.a();
+</script>
+</body>
+</html>

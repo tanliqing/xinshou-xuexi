@@ -33,10 +33,10 @@
     border-radius: 5px;
     margin-top:10px;
 }
-.tour a> img{
+.tour a>.t-img img{
     width: 100%;
 }
-.tour a>span,.tour a>h3,.tour a>div{
+.tour a>span,.tour a>h3,.tour a>.mb{
     position: absolute;
     color:#fff;
 }
@@ -45,15 +45,21 @@
     bottom: 50px;
     font-size: 18px;
 }
-.tour a>div>span{
+.tour a>.mb>span{
     display: block;
 }
-.tour a>div{
+.tour a>.mb{
     padding-left: 4px;
     border-left:4px solid #d31f49;
     left: 12px;
     bottom: 10px;
     font-size: 12px;
+}
+.t-img{
+    display: inline-block;
+    height:150px;
+    width: 100%;
+    overflow: hidden;
 }
 .selected2{
     margin-bottom: 50px;

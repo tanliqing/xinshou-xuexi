@@ -20,23 +20,59 @@
     margin-top: 15px;
     position: relative;
 }
-.selected> div>div,.selected> div>div{
+.head-i{
+    position: relative;
+    color:#797878;
+    font-size: 12px;
+    padding-bottom: 3px;
+
+}
+
+.img-t img {
+    border-radius: 25px;
+    height: 25px;
+    width: 25px;
+}
+.name {
+    position: relative;
+    top: -7px;
+    font-size: 14px;
+}
+.head-i .date {
+    color: #797878;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+.body-b{
     display: inline-block;
 }
-.selected>div>a>img{
+.selected>div>a>div{
     width:40%;
     border-radius: 5px;
-}
-.selected> div>div{
-    width:59%;
-   position: absolute;
-    right:0;
-    height:96%;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
 
+}
+.selected>div>a>div > img{
+  width: 100%;
+
+}
+
+.body-b{
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 59%;
 }
 .selected> div>div h4{
     font-size: 14px;
     line-height: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .selected> div>div p:nth-child(2){
     margin-top: 5px;

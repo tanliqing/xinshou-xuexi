@@ -40,6 +40,9 @@ body{
 .bg > img{
     width: 100%;
 }
+.details{
+    margin-bottom: 60px;
+}
 .details >p{
 
     margin:2px 0;

@@ -17,7 +17,7 @@ function pay(minus,number,plus,total){
     this.number = document.getElementById(number),
     this.plus = document.getElementById(plus),
     this.total =  document.getElementById(total),
-    this.reg = /^[1-9]\d*$/,
+    this.reg = /^([+-]?)\d*\.?\d+$/,
         this.number_2 = function(){
             if(!this.reg.test(this.number.value)){
                 this.number.value = 1 ;
@@ -57,3 +57,28 @@ var pay2 = new  pay("minus","number","plus","total") ;
     pay2.number_2();
     pay2.minus_3();
 })();
+(function(){
+    var attention  = document.getElementById("attention");
+    attention.onclick = function(){
+        attention.className = "attention";
+    }
+})();
+(function(){
+    var share = document.getElementById("share"),
+        details = document.getElementById("details");
+    var shareB = document.getElementById("share-body");
+    share2 = true;
+    share.onclick  = function(){
+        if(share2 == true){
+            shareB.style.display = "block";
+            share2 = false;
+        }else if(share2 == false ){
+            shareB.style.display = "none";
+            share2 = true;
+        }
+    }
+    details.onclick = function(){
+        shareB.style.display = "none";
+        share2 = true;
+    }
+})()

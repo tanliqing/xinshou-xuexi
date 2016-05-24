@@ -18,7 +18,7 @@ html,body{
 .c-details >div{
     position: relative;
 }
-.c-details >div>img{
+.c-details >div>.img-t img{
     height: 25px;
     width: 25px;
     border-radius: 25px;
@@ -202,3 +202,4 @@ textarea{resize:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     -webkit-user-modify:read-write-plaintext-only;
 }
+

@@ -9,6 +9,7 @@
     <title>精选众筹详情</title>
     <!--小图标-->
     <link rel="stylesheet" href="css/iconfont.css" />
+    <link rel="stylesheet" href="css/iconfont (2).css" />
     <!--顶部导航栏-->
     <link rel="stylesheet" href="css/style.css" />
     <!--底部导航栏-->
@@ -24,10 +25,10 @@
         <i class="iconfont">&#x343b;</i></div>
     <div class="launch"><a href="release.html"><i class="iconfont">&#xe601;</i>发起众筹</a></div>
 </nav>
-<div class="details">
+<div class="details" id="details">
     <img src="images/body.png" alt="">
     <div class="c-details">
-        <div><img src="images/body.png" alt="头像"><span class="name">众亲帮_12</span><span class="date"><i class="iconfont">&#xe64d;</i>剩余<span>5</span>天</span></div>
+        <div><a class="img-t"><img src="images/body.png" alt="头像"><span class="name">众亲帮_12</span></a><span class="date"><i class="iconfont">&#xe64d;</i>剩余<span>5</span>天</span></div>
         <p>懂情感的机器人-小腾：解开宝宝的孤独</p>
         <ul>
             <li><span><span>300000</span>元</span><br />目标金额</li>
@@ -86,10 +87,21 @@
 
 <section class="navigation">
     <ul>
-        <li>关注项目</li>
+        <li id="attention">关注项目</li>
         <li id="sustain">我要支持TA</li>
-        <li>项目分享</li>
+        <li id="share">项目分享
+
+        </li>
     </ul>
+    <!--分享-->
+    <div class="share" id="share-body">
+    <ul>
+        <li><i class="iconfont">&#xe649;</i>QQ好友</li>
+        <li><i class="iconfont">&#xe608;</i>QQ空间</li>
+        <li><i class="iconfont">&#xe636;</i>微信好友</li>
+        <li><i class="iconfont">&#xe603;</i>新浪微博</li>
+    </ul>
+    </div>
 </section>
 <!--确定支付信息-->
 <div class="f-bg" id="payment">
@@ -104,6 +116,8 @@
         </div>
     </div>
 </div>
+
+
 <script src="js/payment.js"></script>
 </body>
 </html>

@@ -7,12 +7,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>发起众筹</title>
+    <link rel="stylesheet" href="css/webuploader.css" />
     <!--小图标-->
     <link rel="stylesheet" href="css/iconfont.css" />
     <!--顶部导航栏-->
     <link rel="stylesheet" href="css/style.css" />
     <!--发起众筹-->
     <link rel="stylesheet" href="css/release.css" />
+    <link rel="stylesheet" href="css/activitysmall.css" />
 </head>
 <body>
 <nav class="search search2">
@@ -22,14 +24,38 @@
         <i class="iconfont">&#x343b;</i></div>
     <div class="launch"><a href=""><i class="iconfont">&#xe601;</i>发起众筹</a></div>
 </nav>
-<form action="" class="release">
+<form action="" class="release" id="release">
+    <input type="file" style="display: none" id="choose" accept="image/*" multiple>
     <label for="">项目名称 <input type="text" placeholder="学生家乡食品自主创业"></label>
     <label for="">截止时间 <input type="text" placeholder="2016/05/01"></label>
     <label for="">筹集资金 <input type="text" placeholder="200000元"></label>
     <label for="">联系方式 <input type="text" placeholder="众筹结束工作员会与您联系请正确填写"></label>
-    <textarea placeholder="描述下我的项目具体内容(备注)"></textarea>
-    <input type="file" name="img" multiple="multiple" />
+    <!--<textarea placeholder="描述下我的项目具体内容(备注)"></textarea>-->
+    <div class="main-b" id="main-b">
+        <!--div class="new-b"><span>+</span></div>-->
+        <div class="new-b2">
+            <span class="character">编辑</span>
+            <span class="t-img">上传</span>
+        </div>
+        <div class="img-t">
+            <div>
+                <a class="b-img"><img src="images/ta.png" alt="" /></a>
+            </div>
+            <textarea placeholder="点击添加文字"></textarea>
+            <span class="delete">×</span>
+        </div>
+        <div class="new-b2">
+            <span class="character">编辑</span>
+            <span class="t-img">上传</span>
+        </div>
+    </div>
     <a href="">发起众筹</a>
 </form>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/webuploader.html5only.min.js"></script>
+<script src="js/pictures.js"></script>
+<script src="js/activitysmall.js"></script>
+<script src="js/release.js"></script>
 </body>
 </html>

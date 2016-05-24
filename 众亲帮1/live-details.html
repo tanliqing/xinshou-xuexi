@@ -7,12 +7,13 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no"/>
     <title>活动详情</title>
+    <link rel="stylesheet" href="css/iconfont (2).css" />
     <!--底部导航栏-->
     <link rel="stylesheet" href="css/style2.css" />
     <link rel="stylesheet" href="css/live-details.css" />
 </head>
 <body>
-<div class="details">
+<div class="details" id="details">
     <div class="bg">
         <img src="images/hd.png" alt="">
         <span>放空自己，凭心体会</span>
@@ -33,12 +34,47 @@
 </div>
 <section class="navigation">
     <ul>
-        <li>关注活动</li>
+        <li id="attention">关注活动</li>
         <li id="sustain"><a href="discuss.html">发表感言</a></li>
-        <li>活动分享</li>
+        <li id="share">活动分享</li>
     </ul>
+    <!--分享-->
+    <div class="share" id="share-body">
+        <ul>
+            <li><i class="iconfont">&#xe649;</i>QQ好友</li>
+            <li><i class="iconfont">&#xe608;</i>QQ空间</li>
+            <li><i class="iconfont">&#xe636;</i>微信好友</li>
+            <li><i class="iconfont">&#xe603;</i>新浪微博</li>
+        </ul>
+    </div>
 </section>
 
-
+<script>
+    (function(){
+        var attention  = document.getElementById("attention");
+        attention.onclick = function(){
+            attention.className = "attention";
+        }
+    })();
+    (function(){
+        var share = document.getElementById("share"),
+                details = document.getElementById("details");
+        var shareB = document.getElementById("share-body");
+        share2 = true;
+        share.onclick  = function(){
+            if(share2 == true){
+                shareB.style.display = "block";
+                share2 = false;
+            }else if(share2 == false ){
+                shareB.style.display = "none";
+                share2 = true;
+            }
+        }
+        details.onclick = function(){
+            shareB.style.display = "none";
+            share2 = true;
+        }
+    })()
+</script>
 </body>
 </html>

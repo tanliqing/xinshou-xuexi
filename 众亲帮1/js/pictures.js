@@ -11,8 +11,8 @@ jQuery(function() {
         ratio = window.devicePixelRatio || 1,
 
     // 缩略图大小
-        thumbnailWidth = 700 * ratio,
-        thumbnailHeight = 700 * ratio,
+        thumbnailWidth = 100 ,
+        thumbnailHeight = 100 ,
 
     // Web Uploader实例
         uploader;
@@ -52,6 +52,10 @@ jQuery(function() {
                 '<div class="info">' + file.name + '</div>' +
                 '</div>'
             ),
+            $btns = $('<div class="file-panel">' +
+                '<span class="cancel">删除</span>' +
+                '<span class="rotateRight">向右旋转</span>' +
+                '<span class="rotateLeft">向左旋转</span></div>').appendTo( $li ),
             $img = $li.find('img');
 
         $list.append( $li );

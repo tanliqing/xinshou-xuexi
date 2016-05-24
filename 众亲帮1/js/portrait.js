@@ -19,7 +19,7 @@ jQuery(function() {
     // 初始化Web Uploader
     uploader = WebUploader.create({
         // 自动上传。
-        auto: true,
+        auto: false,
         // swf文件路径
         swf:'css/Uploader.swf',
 
@@ -69,4 +69,3 @@ jQuery(function() {
         $error.text('上传失败');
     });
 });
-var liu;

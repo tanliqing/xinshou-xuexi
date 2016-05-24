@@ -72,7 +72,7 @@ body{
     height:180px;
     width: 94%;
 }
-.main-b{
+form{
     margin-bottom: 55px;
 }
 .main-b textarea{
@@ -111,12 +111,12 @@ textarea{resize:none;
     -webkit-user-modify:read-write-plaintext-only;
 }
 
-.img-t div> img{
+.img-t div>a img{
     display: block;
-    height: 137px;
-    margin-left: -93px;
+   height: 150px;
+    background: url(../images/uploading_03.png) no-repeat 50% 50%;
 }
-.release {
+.release1 {
     background-color:#d31f49;
     color:#fff;
     text-align: center;
@@ -127,22 +127,53 @@ textarea{resize:none;
 }
 .new-b2{
     text-align: center;
-    margin-top:5px;
+    margin:5px 0;
+
 }
 .new-b2 > span{
     cursor: pointer;
     color: rgba(0,0,0,0);
-    background: url(../images/icon5_03.png) no-repeat 1% 1%;
+
     display: inline-block;
 }
-
-.webuploader-pick{
-    background: url(../images/icon5_03.png) no-repeat  239% 0%;
+.character{
+    background: url(../images/icon5_03.png) no-repeat 1% 1%;
 }
-#discuss{
+.t-img{
+    background: url(../images/icon5_03.png) no-repeat 104% 1%;
+}
+.discuss{
+    background: url(../images/icon5_03.png) no-repeat  230% 0%;
+    width: 90px;
     display: inline-block;
     height:22px;
     overflow: hidden;
    position: relative;
     top:4px;
+}
+
+.webuploader-container {
+    position: relative;
+}
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+    color:rgba(0,0,0,0);
+
+    background-size: 66px;
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events:none;
 }

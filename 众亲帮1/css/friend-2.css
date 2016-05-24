@@ -4,7 +4,7 @@
     padding: 0 3%;
     font-size: 20px;
 }
-.friend-2 >.iconfont{
+.friend-2 >a .iconfont{
     cursor: pointer;
     font-size:inherit;
     color:#2b9ee0;
