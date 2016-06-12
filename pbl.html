@@ -70,10 +70,8 @@ function getWindowHeight(){
 }
 
 window.onscroll = function(){
-    alert("a  "+getScrollTop());
-    alert("b  "+getWindowHeight());
-    alert("c  "+getScrollHeight());
-    if(getScrollTop() + getWindowHeight() == getScrollHeight()){
+
+    if(getScrollTop() + getWindowHeight()+200 >= getScrollHeight()){
         alert("you are in the bottom!");
     }
 };
