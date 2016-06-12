@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+   <!-- <script src="js/jquery-1.11.1.min.js"></script>-->
 </head>
 <body>
 <h1>打算打是的</h1>
@@ -69,11 +70,43 @@ function getWindowHeight(){
 }
 
 window.onscroll = function(){
-    alert("aaa");
+    alert("a  "+getScrollTop());
+    alert("b  "+getWindowHeight());
+    alert("c  "+getScrollHeight());
     if(getScrollTop() + getWindowHeight() == getScrollHeight()){
         alert("you are in the bottom!");
     }
 };
 </script>
+<!--<script>
+    console.log($("h1"));
+    scrollBottomTest =function(){
+        $(document).scroll(function(){
+            var $this =$(this),
+                    viewH =$(this).height(),//可见高度
+                    contentH =$(this).get(0).scrollHeight,//内容高度
+                    scrollTop =$(this).scrollTop();//滚动高度
+            console.log($(this));
+            //if(contentH - viewH - scrollTop <= 100) { //到达底部100px时,加载新内容
+            console.log("aaa");
+            if(scrollTop/(contentH -viewH)>=0.95){ //到达底部100px时,加载新内容
+                alert("cg");
+            }
+
+        });
+    }
+    scrollBottomTest();
+</script>-->
+<!--<script type="text/javascript">
+    window.onscroll=function(){
+        var a = document.documentElement.scrollTop==0? document.body.clientHeight : document.documentElement.clientHeight;
+        var b = document.documentElement.scrollTop==0? document.body.scrollTop : document.documentElement.scrollTop;
+        var c = document.documentElement.scrollTop==0? document.body.scrollHeight : document.documentElement.scrollHeight;
+
+        if(a+b==c){
+           alert("ccc");
+        }
+    }
+</script>-->
 </body>
 </html>
