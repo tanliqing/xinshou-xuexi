@@ -1,13 +1,3 @@
-function slideCalendar(){
-    //输出到DOM节点
-    this.id = document.getElementById("slideCalendar");
-    //初始化年份
-    this.year = [2000,2020];
-    //初始化日期,默认当前最新时间，输入格式是new Date(2014,6,5) ，月份是从0开始算的，0=1月……
-    this.initDate = new Date();
-    //绑定到某个id上，点击显示，将返回的值传给该ID
-    this.binding = document.getElementById("new-date");
-}
 slideCalendar.prototype = {
     //初始化
     init:function(){
@@ -21,16 +11,12 @@ slideCalendar.prototype = {
     //上下滑动选择
     slide: function () {
         //定时器
-        var timer,timer2,timer3;
+        var timer5 = {};
         var ul = this.id;
         var slideCalendar = this;
         ul.addEventListener("touchstart", function (e) {
             var slideUl = e.target.parentNode.getAttribute("class");
             if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
-                //每次点击时先清除定时器
-                clearInterval(timer);
-                clearInterval(timer2);
-                clearInterval(timer3);
                 //获取首次触碰的坐标，后续计算移动的距离
                 var jl = e.touches[0].pageY;
                 var eNumber = e.target.parentNode.getAttribute("style");
@@ -53,57 +39,77 @@ slideCalendar.prototype = {
         ul.addEventListener("touchend",function(e){
             var slideUl = e.target.parentNode.getAttribute("class");
             if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
+                var ul =e.target.parentNode;
                 var timerNumber = 0;
                 var liHeight = e.target.offsetHeight;
-                var eNumber = e.target.parentNode.getAttribute("style");
+                var eNumber = ul.getAttribute("style");
                 var sum = parseFloat(eNumber.slice("4","-2"));
                 var reduce = Math.round(sum/liHeight)*liHeight;
                 var reduceSum = reduce-sum;
                 //限制拖动的范围，超出最大距离，进行回滚
-                var limitHeight = -(e.target.parentNode.offsetHeight - e.target.parentNode.parentNode.offsetHeight);
-                var newTop = e.target.parentNode.getAttribute("style");
+                var limitHeight = -(ul.offsetHeight - ul.parentNode.offsetHeight);
+                var newTop = ul.getAttribute("style");
                 var newSum = parseFloat(newTop.slice("4","-2"));
                 var round = Math.round(newSum/liHeight)*liHeight;
                 if(newSum>e.target.offsetHeight){
-                    timer3 = setInterval(function(){
-                        var newENumber = e.target.parentNode.getAttribute("style");
+                    //每次触发时先清除定时器
+                   clearInterval(timer5[ul.getAttribute("id")]);
+                    timer5[ul.getAttribute("id")] = setInterval(function(){
+                        var newENumber = ul.getAttribute("style");
                         var newSum = parseFloat(newENumber.slice("4","-2"));
                         var jg = (e.target.offsetHeight-newSum)/8;
                         var njl = jg > 0 ?Math.ceil(jg):Math.floor(jg);
-                        e.target.parentNode.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
+                        ul.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
                         if(njl >= 0){
-                            var selectNumber = parseFloat(e.target.parentNode.getAttribute("style").slice("4","-2"));
-                            slideCalendar.slideDate(selectNumber,e);
-                            clearInterval(timer3);
+                            clearInterval(timer5[ul.getAttribute("id")]);
+                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            slideCalendar.slideDate(selectNumber,e,ul);
+                            timer5[ul.getAttribute("id")] = null;
                         }
                     },"10");
-                }else if(round < limitHeight-e.target.offsetHeight){
-                    timer2 = setInterval(function(){
-                        var newENumber = e.target.parentNode.getAttribute("style");
+                }
+                else if(round < limitHeight-e.target.offsetHeight){
+                        //每次触发时先清除定时器
+                        clearInterval(timer5[ul.getAttribute("id")]);
+                        timer5[ul.getAttribute("id")] = setInterval(function(){
+                        var newENumber = ul.getAttribute("style");
                         var newSum = parseFloat(newENumber.slice("4","-2"));
-                        var offParentHeight = -( e.target.parentNode.offsetHeight - e.target.offsetHeight -e.target.offsetHeight);
+                        var offParentHeight = -( ul.offsetHeight - e.target.offsetHeight -e.target.offsetHeight);
                         var jg = (offParentHeight-newSum)/8;
                         var njl = jg > 0 ?Math.ceil(jg):Math.floor(jg);
-                        e.target.parentNode.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
+                            ul.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
                         if(njl == offParentHeight || njl==0){
-                            var selectNumber = parseFloat(e.target.parentNode.getAttribute("style").slice("4","-2"));
-                            slideCalendar.slideDate(selectNumber,e);
-                            clearInterval(timer2);
+                            clearInterval(timer5[ul.getAttribute("id")]);
+                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            slideCalendar.slideDate(selectNumber,e,ul);
+                            timer5[ul.getAttribute("id")] = null;
                         }
                     },"10");
-                }else{
+                }
+                else{
+                    //每次触发时先清除定时器
+                    clearInterval(timer5[ul.getAttribute("id")]);
                     //当手指离开屏幕时，触发回调动画效果
-                    timer = setInterval(function(){
-                        if(reduceSum>0.5){
+                    timer5[ul.getAttribute("id")] = setInterval(function(){
+                        if(reduceSum >= (0.5)){
                             timerNumber =timerNumber+0.5;
-                        }else if(reduceSum<(-0.5)){
-                            timerNumber =timerNumber-0.5;
                         }
-                        e.target.parentNode.setAttribute("style","top:"+Math.ceil(sum+timerNumber)+"px");
+                        else if(reduceSum == 0){
+                            clearInterval(timer5[ul.getAttribute("id")]);
+                            timerNumber = 0;
+                        }
+                        else if(reduceSum <= (-0.5)){
+                            timerNumber =timerNumber-0.5;
+                        }else{
+                            console.log(reduceSum + ":" +timerNumber +":"+sum);
+                        }
+                        ul.setAttribute("style","top:"+Math.ceil(sum+timerNumber)+"px");
                         if(reduceSum == timerNumber){
-                            var selectNumber = parseFloat(e.target.parentNode.getAttribute("style").slice("4","-2"));
-                            slideCalendar.slideDate(selectNumber,e);
-                            clearInterval(timer);
+                            clearInterval(timer5[ul.getAttribute("id")]);
+                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            slideCalendar.slideDate(selectNumber,e,ul);
+                            timerNumber=0;
+                            timer5[ul.getAttribute("id")] = null;
                         }
                     },"10");
                 }
@@ -111,15 +117,15 @@ slideCalendar.prototype = {
         })
     },
     //滑动时，判断坐标，获取当前时间
-    slideDate:function(slectNumber,e){
+    slideDate:function(slectNumber,e,ul){
         /*获取父元素的高度+当前top的偏移量，再获取父元素的高度+额外一个子元素的高度（因为是要取居中li的坐标）。两者向减，
          最后除以li的高度，并转换成绝对值，得到当前坐标的索引值*/
-        var thisIndex =  Math.abs(((e.target.parentNode.offsetHeight + slectNumber) - (e.target.parentNode.offsetHeight+ e.target.offsetHeight)) / e.target.offsetHeight);
-        var ul = e.target.parentNode;
+        var thisIndex =  Math.abs(((ul.offsetHeight + slectNumber) - (ul.offsetHeight+ e.target.offsetHeight)) / e.target.offsetHeight);
         var liLen = ul.getElementsByTagName("li");
         for(var i= 0,item=liLen.length;i<item;i++){
             liLen[i].setAttribute("class","");
         }
+        if(liLen[thisIndex]){
         liLen[thisIndex].setAttribute("class","select");
         if(ul.getAttribute("class") == "date-year"){
             this.keepNewDate[0] =  liLen[thisIndex].innerText;
@@ -128,7 +134,8 @@ slideCalendar.prototype = {
         }else{
             this.keepNewDate[2] =  liLen[thisIndex].innerText;
         }
-        this.month(liLen[thisIndex]);
+        this.month(liLen[thisIndex],e.target.offsetHeight);
+        }
     },
     //初始化内容
     initNewDate:function(){
@@ -138,7 +145,7 @@ slideCalendar.prototype = {
         //初始化年份
         var year = document.getElementById("date-year");
         year.innerHTML = null;
-        for(var i=this.year[0];i<this.year[1];i++){
+        for(var i=this.year[0];i<=this.year[1];i++){
             year.innerHTML += "<li>"+i+"</li>";
         }
         this.keepNewDate[0] = this.initDate.getFullYear();
@@ -160,33 +167,38 @@ slideCalendar.prototype = {
             }
             day.innerHTML+="<li>"+newDate.getDate()+"</li>";
         }
-        //初始化ul的top和select
-        function initTop(li,dateNumber){
-            var monthLi = li.getElementsByTagName("li");
-            for(var m= 0,item2=monthLi.length;m<item2;m++){
-                if(monthLi[m].innerText ==  dateNumber){
-                    var top2 = m * monthLi[m].offsetHeight -monthLi[m].offsetHeight;
-                    monthLi[m].setAttribute("class","select");
-                    li.setAttribute("style","top:"+(-top2)+"px");
-                    break;
-                }
-            }
-        }
-        initTop(year,this.keepNewDate[0]);
-        initTop(month,this.keepNewDate[1]);
-        initTop(day,this.keepNewDate[2]);
+        this.initTop(year,this.keepNewDate[0]);
+        this.initTop(month,this.keepNewDate[1]);
+        this.initTop(day,this.keepNewDate[2]);
+        //初始化完毕之后，手动清除初始化方法
+        this.initTop = null;
     },
-    //滑动年or月时，重置天
-    month:function(date1){
-        if(date1.parentNode.getAttribute("class") == "date-month"){
-            day(date1,this.keepNewDate[0],this.keepNewDate[2]);
-        }else if(date1.parentNode.getAttribute("class") == "date-year"){
-            day(this.keepNewDate[1],this.keepNewDate[0],this.keepNewDate[2]);
+    //初始化年、月、日
+     initTop:function(li,dateNumber){
+     var monthLi = li.getElementsByTagName("li");
+     for(var m= 0,item2=monthLi.length;m<item2;m++){
+        if(monthLi[m].innerText ==  dateNumber){
+            var top2 = m * monthLi[m].offsetHeight -monthLi[m].offsetHeight;
+            monthLi[m].setAttribute("class","select");
+            li.setAttribute("style","top:"+(-top2)+"px");
+            break;
         }
-        function day(date,dateN,date2){
+    }
+},
+    //滑动年or月时，重置天
+    month:function(date1,liheight){
+        if(date1.parentNode.getAttribute("class") == "date-month"){
+            this.day(date1,this.keepNewDate[0],liheight);
+        }else if(date1.parentNode.getAttribute("class") == "date-year"){
+            this.day(this.keepNewDate[1],this.keepNewDate[0],liheight);
+        }
+    },
+    //月份改变，天数变化
+    day:function(date,dateN,liheight){
+        var newday = this;
+        var celaerTimeout1 = setTimeout(function(){
             var day = document.getElementById("date-day");
             day.innerHTML = null;
-            console.log();
             for(var i=1;i<32;i++){
                 if(date.innerText){
                     var newDate = new Date(dateN,date.innerText-1,i);
@@ -200,29 +212,24 @@ slideCalendar.prototype = {
             }
             //防止当前天数的高小于top的值
             var dateDay = document.getElementById("date-day");
-            var dateDayLiH = dateDay.getElementsByTagName("li")[0].offsetHeight;
             if(dateDay.getAttribute("style")){
                 var dayTop = dateDay.getAttribute("style");
                 var dateDayTop  = parseFloat(dayTop.slice("4","-2"));
-                if(dateDay.offsetHeight-dateDayLiH <= Math.abs(dateDayTop)){
-                    dateDay.setAttribute("style","top:"+(-(dateDay.offsetHeight-dateDayLiH*2))+"px");
+                if(dateDay.offsetHeight-liheight <= Math.abs(dateDayTop)){
+                    dateDay.setAttribute("style","top:"+(-(dateDay.offsetHeight-liheight*2))+"px");
                 }
                 //当坐标改变时，重新获取当前坐标内天数的值
                 var newTop = parseFloat(dateDay.getAttribute("style").slice("4","-2"));
-                var thisIndex =  Math.abs(((dateDay.offsetHeight + newTop) - (dateDay.offsetHeight+ dateDayLiH)) / dateDayLiH);
-                dateDay.getElementsByTagName("li")[thisIndex].setAttribute("class","select");
-                date2 = dateDay.getElementsByTagName("li")[thisIndex].innerText;
+                var reduce1 = Math.round(newTop/liheight)*liheight;
+                var thisIndex =  Math.abs(((dateDay.offsetHeight + reduce1) - (dateDay.offsetHeight+ liheight)) / liheight);
+                if(dateDay.getElementsByTagName("li")[thisIndex]){
+                    dateDay.getElementsByTagName("li")[thisIndex].setAttribute("class","select");
+                    newday.keepNewDate[2] = dateDay.getElementsByTagName("li")[thisIndex].innerText;
+                }
             }
-        }
-    },
-    //确定按钮，点击返回当前选择日期
-    /*confirm:function(){
-     var confirm1 =  document.getElementById("confirm");
-     var parentThis = this;
-     confirm1.addEventListener("click",function(){
-     console.log(parentThis.keepNewDate.join("-"))
-     })
-     },*/
+            clearTimeout(celaerTimeout1);
+        },100)
+},
     //绑定到input上，点击显示
     click:function(){
         var Calendar = this;

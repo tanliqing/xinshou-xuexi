@@ -41,12 +41,14 @@
         }
         .date-year > li,.date-month > li,.date-day > li{
             height:40px;
-            border-bottom: 1px solid #c1c3c4;
             line-height: 40px;
+            font-size:14px;
             box-sizing: border-box;
+            color:rgb(153,153,153)
         }
-        .select{
-            color:red;
+        #slideCalendar .select{
+            font-size:16px;
+            color:#0a0a0a;
         }
         .control span{
             display: inline-block;
@@ -78,6 +80,19 @@
     </div>-->
 </div>
 <input type="text" id="new-date" placeholder="点击选择日期"  readonly="value"/>
+<script>
+    function slideCalendar(){
+        //输出到DOM节点
+        this.id = document.getElementById("slideCalendar");
+        //初始化年份
+        this.year = [2000,2020];
+        //初始化日期,默认当前最新时间，输入格式是new Date(2014,6,5) ，月份是从0开始算的，0=1月……
+        this.initDate = new Date();
+        //绑定到某个input的id上，点击显示，将返回的值传给该input
+        this.binding = document.getElementById("new-date");
+    }
+
+</script>
 <script src="js/slideCalendar.js"></script>
 </body>
 </html>
