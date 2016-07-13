@@ -29,7 +29,7 @@ slideCalendar.prototype = {
                     if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
                         var top = -(jl-e.touches[0].pageY)/2;
                         if(eNumber){
-                            var sum  = parseFloat(eNumber.slice("4","-2"))+top;
+                            var sum  = Math.round(parseFloat(eNumber.slice("4","-2")))+top;
                             e.target.parentNode.setAttribute("style","top:"+sum+"px");
                         }else{
                             e.target.parentNode.setAttribute("style","top:"+top+"px");
@@ -46,26 +46,26 @@ slideCalendar.prototype = {
                 var timerNumber = 0;
                 var liHeight = e.target.offsetHeight;
                 var eNumber = ul.getAttribute("style");
-                var sum = parseFloat(eNumber.slice("4","-2"));
+                var sum = Math.round(parseFloat(eNumber.slice("4","-2")) );
                 var reduce = Math.round(sum/liHeight)*liHeight;
-                var reduceSum = reduce-Math.round(sum);
+                var reduceSum = reduce-sum;
                 //限制拖动的范围，超出最大距离，进行回滚
                 var limitHeight = -(ul.offsetHeight - ul.parentNode.offsetHeight);
                 var newTop = ul.getAttribute("style");
-                var newSum = parseFloat(newTop.slice("4","-2"));
+                var newSum = Math.round(parseFloat(newTop.slice("4","-2")));
                 var round = Math.round(newSum/liHeight)*liHeight;
                 if(newSum>e.target.offsetHeight){
                     //每次触发时先清除定时器
                    clearInterval(timer5[ul.getAttribute("id")]);
                     timer5[ul.getAttribute("id")] = setInterval(function(){
                         var newENumber = ul.getAttribute("style");
-                        var newSum = parseFloat(newENumber.slice("4","-2"));
+                        var newSum =  Math.round(parseFloat(newENumber.slice("4","-2")));
                         var jg = (e.target.offsetHeight-newSum)/8;
                         var njl = jg > 0 ?Math.ceil(jg):Math.floor(jg);
                         ul.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
                         if(njl >= 0){
                             clearInterval(timer5[ul.getAttribute("id")]);
-                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            var selectNumber =  Math.round(parseFloat(ul.getAttribute("style").slice("4","-2")));
                             slideCalendar.slideDate(selectNumber,e,ul);
                             timer5[ul.getAttribute("id")] = null;
                         }
@@ -76,14 +76,14 @@ slideCalendar.prototype = {
                         clearInterval(timer5[ul.getAttribute("id")]);
                         timer5[ul.getAttribute("id")] = setInterval(function(){
                         var newENumber = ul.getAttribute("style");
-                        var newSum = parseFloat(newENumber.slice("4","-2"));
+                        var newSum = Math.round(parseFloat(newENumber.slice("4","-2")));
                         var offParentHeight = -( ul.offsetHeight - e.target.offsetHeight -e.target.offsetHeight);
                         var jg = (offParentHeight-newSum)/8;
                         var njl = jg > 0 ?Math.ceil(jg):Math.floor(jg);
                             ul.setAttribute("style","top:"+Math.ceil(njl+newSum)+"px");
                         if(njl == offParentHeight || njl==0){
                             clearInterval(timer5[ul.getAttribute("id")]);
-                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            var selectNumber = Math.round(parseFloat(ul.getAttribute("style").slice("4","-2")));
                             slideCalendar.slideDate(selectNumber,e,ul);
                             timer5[ul.getAttribute("id")] = null;
                         }
@@ -109,7 +109,7 @@ slideCalendar.prototype = {
                         ul.setAttribute("style","top:"+Math.ceil(sum+timerNumber)+"px");
                         if(reduceSum == timerNumber){
                             clearInterval(timer5[ul.getAttribute("id")]);
-                            var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
+                            var selectNumber =  Math.round(parseFloat(ul.getAttribute("style").slice("4","-2")));
                             slideCalendar.slideDate(selectNumber,e,ul);
                             timerNumber=0;
                             timer5[ul.getAttribute("id")] = null;
@@ -217,12 +217,12 @@ slideCalendar.prototype = {
             var dateDay = document.getElementById("date-day");
             if(dateDay.getAttribute("style")){
                 var dayTop = dateDay.getAttribute("style");
-                var dateDayTop  = parseFloat(dayTop.slice("4","-2"));
+                var dateDayTop  = Math.round(parseFloat(dayTop.slice("4","-2")));
                 if(dateDay.offsetHeight-liheight <= Math.abs(dateDayTop)){
                     dateDay.setAttribute("style","top:"+(-(dateDay.offsetHeight-liheight*2))+"px");
                 }
                 //当坐标改变时，重新获取当前坐标内天数的值
-                var newTop = parseFloat(dateDay.getAttribute("style").slice("4","-2"));
+                var newTop = Math.round(parseFloat(dateDay.getAttribute("style").slice("4","-2")));
                 var reduce1 = Math.round(newTop/liheight)*liheight;
                 var thisIndex =  Math.abs(((dateDay.offsetHeight + reduce1) - (dateDay.offsetHeight+ liheight)) / liheight);
                 if(dateDay.getElementsByTagName("li")[thisIndex]){
