@@ -15,6 +15,7 @@ slideCalendar.prototype = {
         var ul = this.id;
         var slideCalendar = this;
         ul.addEventListener("touchstart", function (e) {
+            e = e || event;
             var slideUl = e.target.parentNode.getAttribute("class");
             if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
                 //获取首次触碰的坐标，后续计算移动的距离
@@ -23,6 +24,7 @@ slideCalendar.prototype = {
                 e.preventDefault();
                 //手指移动时，不断刷新当前元素的坐标
                 ul.addEventListener("touchmove", function (e) {
+                    e  =  e || event;
                     var slideUl = e.target.parentNode.getAttribute("class");
                     if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
                         var top = -(jl-e.touches[0].pageY)/2;
@@ -37,6 +39,7 @@ slideCalendar.prototype = {
             }
         });
         ul.addEventListener("touchend",function(e){
+            e = e || event;
             var slideUl = e.target.parentNode.getAttribute("class");
             if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
                 var ul =e.target.parentNode;
@@ -101,9 +104,10 @@ slideCalendar.prototype = {
                         else if(reduceSum <= (-0.5)){
                             timerNumber =timerNumber-0.5;
                         }else{
-                            console.log(reduceSum + ":" +timerNumber +":"+sum);
+                            //console.log(reduceSum + ":" +timerNumber +":"+sum);
                         }
                         ul.setAttribute("style","top:"+Math.ceil(sum+timerNumber)+"px");
+                        alert(reduceSum +":"+timerNumber);
                         if(reduceSum == timerNumber){
                             clearInterval(timer5[ul.getAttribute("id")]);
                             var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
