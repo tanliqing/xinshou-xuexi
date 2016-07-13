@@ -27,6 +27,7 @@ slideCalendar.prototype = {
                     e  =  e || event;
                     var slideUl = e.target.parentNode.getAttribute("class");
                     if (slideUl == "date-year" || slideUl == "date-month" || slideUl == "date-day") {
+                        console.log(e.touches[0].pageY);
                         var top = -(jl-e.touches[0].pageY)/2;
                         if(eNumber){
                             var sum  = Math.round(parseFloat(eNumber.slice("4","-2")))+top;
@@ -34,6 +35,9 @@ slideCalendar.prototype = {
                         }else{
                             e.target.parentNode.setAttribute("style","top:"+top+"px");
                         }
+                    }
+                    if(e.touches[0].pageY<=0){
+                        alert(e.touches[0].pageY);
                     }
                 })
             }
