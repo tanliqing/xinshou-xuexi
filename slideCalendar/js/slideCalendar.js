@@ -36,8 +36,9 @@ slideCalendar.prototype = {
                             e.target.parentNode.setAttribute("style","top:"+top+"px");
                         }
                     }
+                    alert(e.touches[0].pageY);
                     if(e.touches[0].pageY<=0){
-                        alert(e.touches[0].pageY);
+                        alert(1+":"+e.touches[0].pageY);
                     }
                 })
             }
