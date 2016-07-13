@@ -48,13 +48,12 @@ slideCalendar.prototype = {
                 var eNumber = ul.getAttribute("style");
                 var sum = parseFloat(eNumber.slice("4","-2"));
                 var reduce = Math.round(sum/liHeight)*liHeight;
-                var reduceSum = reduce-sum;
+                var reduceSum = reduce-Math.round(sum);
                 //限制拖动的范围，超出最大距离，进行回滚
                 var limitHeight = -(ul.offsetHeight - ul.parentNode.offsetHeight);
                 var newTop = ul.getAttribute("style");
                 var newSum = parseFloat(newTop.slice("4","-2"));
                 var round = Math.round(newSum/liHeight)*liHeight;
-                alert(newSum +":"+liHeight + ":" +round +"="+(Math.round(3.555555)));
                 if(newSum>e.target.offsetHeight){
                     //每次触发时先清除定时器
                    clearInterval(timer5[ul.getAttribute("id")]);
