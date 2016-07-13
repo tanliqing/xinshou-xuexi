@@ -54,6 +54,7 @@ slideCalendar.prototype = {
                 var newTop = ul.getAttribute("style");
                 var newSum = parseFloat(newTop.slice("4","-2"));
                 var round = Math.round(newSum/liHeight)*liHeight;
+                alert(newSum +":"+liHeight + ":" +round +"="+(Math.round(3.555555)));
                 if(newSum>e.target.offsetHeight){
                     //每次触发时先清除定时器
                    clearInterval(timer5[ul.getAttribute("id")]);
@@ -107,7 +108,6 @@ slideCalendar.prototype = {
                             //console.log(reduceSum + ":" +timerNumber +":"+sum);
                         }
                         ul.setAttribute("style","top:"+Math.ceil(sum+timerNumber)+"px");
-                        alert(reduceSum +":"+timerNumber);
                         if(reduceSum == timerNumber){
                             clearInterval(timer5[ul.getAttribute("id")]);
                             var selectNumber = parseFloat(ul.getAttribute("style").slice("4","-2"));
