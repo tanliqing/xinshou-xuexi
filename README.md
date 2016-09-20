@@ -6,5 +6,5 @@
 	<li><a href="http://htmlpreview.github.io/?https://github.com/zuluoaaa/xinshou-xuexi/blob/master/简单的响应式布局.html">简单的响应式布局</a></li>
 	<li><a href="http://htmlpreview.github.io/?https://github.com/zuluoaaa/xinshou-xuexi/blob/fba32f75074bbe49e8f4b6c86755d4b0617f2cb5/ife/flexBox-任务10.html">简单的flex弹性布局</a></li>
 	<li><a href="http://htmlpreview.github.io/?https://github.com/zuluoaaa/xinshou-xuexi/blob/master/从小到大的排序方法1.html">获取节点并对节点内容进行排序</a></li>
-	<li>联系QQ：864457005</li>
+
 </ul>
