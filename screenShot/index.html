@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>图片截图</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="img">
+            <canvas id='previewImg'></canvas>
+    </div>
+
+</div>
+<input id="select" type="button" name="select" value="选择图片">
+<input id="img-file" type="file" name="file">
+<div class="mask">
+    <span class="del"></span>
+    <input id="saveImg" type="button" name="saveImg" value="保存截图">
+    <div class="result">
+        <canvas id="imgCanvas"></canvas>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
