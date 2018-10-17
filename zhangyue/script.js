@@ -1,6 +1,6 @@
 window.onload = function () {
-      var imgs = document.querySelectorAll('.img'),
-        img_container = document.querySelector('.banner'),
+      var img_container = document.querySelector('.banner'),
+        imgs = img_container.querySelectorAll('section'),
         menu_icon = document.querySelector('.left-menu'),
         menu = document.querySelector('.menu'),
         flag = 0,
