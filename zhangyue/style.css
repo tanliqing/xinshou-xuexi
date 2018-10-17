@@ -161,7 +161,10 @@
     .banner .wrap .go-right {
       background: url("images/right.png") no-repeat;
       right: 0; }
-    .banner .wrap .img {
+    .banner .wrap .on {
+      opacity: 1;
+      z-index: 3; }
+    .banner .wrap section {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -170,12 +173,9 @@
       width: 100%;
       transform: translate(-50%, -50%);
       transition: all 1s; }
-      .banner .wrap .img img {
+      .banner .wrap section img {
         display: block;
         margin: 0 auto; }
-      .banner .wrap .img:first-child {
-        opacity: 1;
-        z-index: 1; }
 
 .aside {
   margin: 7px 0;
