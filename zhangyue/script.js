@@ -1,10 +1,10 @@
 window.onload = function () {
       var imgs = document.querySelectorAll('.banner section'),
-        img_container = document.querySelector('.banner'),
-        menu_icon = document.querySelector('.left-menu'),
-        menu = document.querySelector('.menu'),
-        flag = 0,
-        timer = null;
+          img_container = document.querySelector('.banner'),
+          menu_icon = document.querySelector('.left-menu'),
+          menu = document.querySelector('.menu'),
+          flag = 0,
+          timer = null;
       if(window.innerWidth < 767){
         var banner_imgs = img_container.querySelectorAll('img');
         for(var i=0;i<banner_imgs.length;i++){
@@ -24,7 +24,7 @@ window.onload = function () {
         }
       }
     }
-    function render(index){//也可定义@keyframe，通过切换css类实现图片消失与出现。
+    function render(index){
         for(var i=0;i<imgs.length;i++){
           imgs[i].className = imgs[i].className.replace(/\s*on/, '');
         }
