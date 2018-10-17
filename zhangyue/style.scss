@@ -200,7 +200,11 @@
       background:url('images/right.png') no-repeat;
       right:0;
     }
-    .img {
+    .on {
+        opacity:1;
+        z-index:3;
+      }
+    section {
       position:absolute;
       top:50%;
       left:50%;
