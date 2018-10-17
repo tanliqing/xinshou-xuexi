@@ -26,12 +26,9 @@ window.onload = function () {
     }
     function render(index){//也可定义@keyframe，通过切换css类实现图片消失与出现。
         for(var i=0;i<imgs.length;i++){
-          imgs[i].style.opacity="0";
-          imgs[i].style.zIndex="0";
+          imgs[i].className = imgs[i].className.replace(/\s*on/, '');
         }
-
-        imgs[index].style.opacity="1";
-        imgs[index].style.zIndex="3";
+        imgs[index].className += ' on';
     }
 
     function play(){
